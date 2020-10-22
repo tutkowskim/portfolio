@@ -14,6 +14,8 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import { createMuiTheme, makeStyles, ThemeProvider } from '@material-ui/core/styles';
 
+import blueGrey from '@material-ui/core/colors/blueGrey';
+
 import Brightness4Icon from '@material-ui/icons/Brightness4';
 import Brightness7Icon from '@material-ui/icons/Brightness7';
 import MenuIcon from '@material-ui/icons/Menu';
@@ -99,7 +101,7 @@ function ThemedApp(props) {
 }
 
 function App() {
-  const [prefersDarkMode, setPrefersDarkMode] = useLocalStorage('prefersDarkMode', true);
+  const [prefersDarkMode, setPrefersDarkMode] = useLocalStorage('prefersDarkMode', false);
   const toggleDarkMode = () => setPrefersDarkMode(!prefersDarkMode);
 
   const theme = React.useMemo(
@@ -107,6 +109,7 @@ function App() {
       createMuiTheme({
         palette: {
           type: prefersDarkMode ? 'dark' : 'light',
+          primary: blueGrey,
         },
       }),
     [prefersDarkMode],
