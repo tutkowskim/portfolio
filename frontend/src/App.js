@@ -1,5 +1,6 @@
 import React from 'react';
 import { Route, Switch, Redirect, useHistory } from 'react-router-dom';
+import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
 
 import AppBar from '@material-ui/core/AppBar';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -23,6 +24,11 @@ import MenuIcon from '@material-ui/icons/Menu';
 import { Pages } from './Pages';
 import useLocalStorage from './useLocalStorage';
 import useWindowSize from './useWindowSize';
+
+const apolloClient = new ApolloClient({
+  uri: '/api/graphql',
+  cache: new InMemoryCache()
+});
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -116,10 +122,12 @@ function App() {
   );
 
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline/>
-      <ThemedApp isDarkMode={prefersDarkMode} toggleDarkMode={toggleDarkMode} />
-    </ThemeProvider>
+    <ApolloProvider client={apolloClient}>
+      <ThemeProvider theme={theme}>
+        <CssBaseline/>
+        <ThemedApp isDarkMode={prefersDarkMode} toggleDarkMode={toggleDarkMode} />
+      </ThemeProvider>
+    </ApolloProvider>
   );
 }
 
