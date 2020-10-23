@@ -34,7 +34,6 @@ const useStyles = makeStyles((theme) => ({
 function Projects() {
   const classes = useStyles();
   const { loading, error,  data } = useQuery(PROJECTS);
-  console.log(loading, error, data);
 
   return (
     <div className={classes.projects}>
