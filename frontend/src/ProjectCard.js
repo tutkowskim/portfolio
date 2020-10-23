@@ -22,15 +22,15 @@ const useStyles = makeStyles({
 
 function ProjectCard(props) {
   const classes = useStyles();
-  const { title, coverImageUrl, description, projectUrl } = props;
+  const { name, coverImageUrl, description, projectUrl } = props;
   const openProject = () => window.open(projectUrl, '_blank');
 
   return (
     <Card className={classes.root}>
       <CardActionArea onClick={openProject}>
-        <CardMedia className={classes.media} image={coverImageUrl} title={title} />
+        <CardMedia className={classes.media} image={coverImageUrl} title={name} />
         <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">{title}</Typography>
+          <Typography gutterBottom variant="h5" component="h2">{name}</Typography>
           <Typography className={classes.description} variant="body2" color="textSecondary" component="p">{description}</Typography>
         </CardContent>
       </CardActionArea>

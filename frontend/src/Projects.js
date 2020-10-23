@@ -39,7 +39,7 @@ function Projects() {
     <div className={classes.projects}>
       <Typography variant='h4' className={classes.projectsTitle}>Projects</Typography>
       <Grid container justify='center' alignItems='center' spacing={3}>
-        { loading ? <CircularProgress /> : !error && data.projects.map(project => <Grid item><ProjectCard {...project} /></Grid>  ) }
+        { loading ? <CircularProgress /> : !error && data.projects.map(project => <Grid key={project.name} item><ProjectCard {...project} /></Grid>  ) }
       </Grid>
     </div>
   )
