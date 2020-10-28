@@ -56,7 +56,7 @@ function ContactMe() {
       <div className={classes.socialMediaList}>
         { socialMediaLinks.map(socialMediaLink =>
           <a key={socialMediaLink.name} className={classes.socialMediaListItem} target="_blank"  rel="noopener noreferrer" href={socialMediaLink.profileUrl}>
-            <img height="72px" src={socialMediaLink.imgUrl} title={socialMediaLink.name} />
+            <img height="72px" src={socialMediaLink.imgUrl} alt={socialMediaLink.name} title={socialMediaLink.name} />
           </a>
         )}
       </div>
