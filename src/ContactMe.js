@@ -6,22 +6,22 @@ import { makeStyles } from '@material-ui/core/styles';
 const socialMediaLinks = [
   { 
     name: 'Facebook',
-    imgUrl: './SocialMediaLogos/Facebook.png',
+    imgUrl: './social_media_logos/Facebook.png',
     profileUrl: 'https://www.facebook.com/tutkowski.mark',
   },
   { 
     name: 'GitHub',
-    imgUrl: './SocialMediaLogos/GitHub.png',
+    imgUrl: './social_media_logos/GitHub.png',
     profileUrl: 'https://github.com/tutkowskim',
   },
   { 
     name: 'Instagram',
-    imgUrl: './SocialMediaLogos/Instagram.png',
+    imgUrl: './social_media_logos/Instagram.png',
     profileUrl: 'https://www.instagram.com/tutkowski',
   },
   { 
     name: 'LinkedIn',
-    imgUrl: './SocialMediaLogos/LinkedIn.png',
+    imgUrl: './social_media_logos/LinkedIn.png',
     profileUrl: 'https://www.linkedin.com/in/marktutkowski',
   },
 ];
