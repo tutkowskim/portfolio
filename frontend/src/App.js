@@ -36,8 +36,9 @@ const useStyles = makeStyles((theme) => ({
   },
   app: {
     height: "100vh",
-    display: "flex",
-    flexDirection: "column",
+  },
+  toolBar: {
+    height: "64px",
   },
   drawerList: {
     width: "250px",
@@ -49,7 +50,7 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
   appContent: {
-    flexGrow: 1,
+    height: "calc(100% - 64px)",
   },
 }));
 
@@ -78,7 +79,7 @@ function ThemedApp(props) {
   return (
     <div className={classes.app}>
       <AppBar position="static">
-        <Toolbar>
+        <Toolbar className={classes.toolBar}>
           <Typography variant="h6" className={classes.title}>Mark Tutkowski</Typography>
           {windowSize.width > 600 ? <>
             { Pages.map(page => <Button key={page.name} className={classes.menuButton} color="inherit" onClick={ () => changePage(page.route) }>{page.name}</Button>) }

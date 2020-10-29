@@ -24,8 +24,7 @@ const socialMediaLinks = [
     imgUrl: './SocialMediaLogos/LinkedIn.png',
     profileUrl: 'https://www.linkedin.com/in/marktutkowski',
   },
-
-]
+];
 
 const useStyles = makeStyles((theme) => ({
   contactMe: {
@@ -55,7 +54,7 @@ function ContactMe() {
       <Typography variant="h4">Contact Me</Typography>
       <div className={classes.socialMediaList}>
         { socialMediaLinks.map(socialMediaLink =>
-          <a key={socialMediaLink.name} className={classes.socialMediaListItem} target="_blank"  rel="noopener noreferrer" href={socialMediaLink.profileUrl}>
+          <a key={socialMediaLink.name} className={classes.socialMediaListItem} target="_blank" rel="noopener noreferrer" href={socialMediaLink.profileUrl}>
             <img height="72px" src={socialMediaLink.imgUrl} alt={socialMediaLink.name} title={socialMediaLink.name} />
           </a>
         )}
