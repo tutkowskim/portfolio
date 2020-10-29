@@ -29,6 +29,8 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
   app: {
+    display: "flex",
+    flexDirection: "column",
     height: "100vh",
   },
   toolBar: {
@@ -44,7 +46,9 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
   appContent: {
-    height: "calc(100% - 64px)",
+    flexBasis: "calc(100% - 64px)",
+    flexGrow: 1,
+    flexShrink: 1,
   },
 }));
 
