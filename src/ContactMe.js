@@ -45,6 +45,9 @@ const useStyles = makeStyles((theme) => ({
     paddingLeft: "5px",
     paddingRight: "5px",
   },
+  socialMediaIcon: {
+    height: "72px",
+  },
 }));
 
 function ContactMe() {
@@ -55,7 +58,7 @@ function ContactMe() {
       <div className={classes.socialMediaList}>
         { socialMediaLinks.map(socialMediaLink =>
           <a key={socialMediaLink.name} className={classes.socialMediaListItem} target="_blank" rel="noopener noreferrer" href={socialMediaLink.profileUrl}>
-            <img height="72px" src={socialMediaLink.imgUrl} alt={socialMediaLink.name} title={socialMediaLink.name} />
+            <img className={classes.socialMediaIcon} src={socialMediaLink.imgUrl} alt={socialMediaLink.name} title={socialMediaLink.name} />
           </a>
         )}
       </div>
