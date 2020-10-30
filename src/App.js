@@ -95,7 +95,7 @@ function ThemedApp(props) {
           </>}
         </Toolbar>
       </AppBar>
-      <Container className={classes.appContent} maxWidth="md">
+      <Container className={classes.appContent} maxWidth="lg">
         <Switch>
           { Pages.map(page => <Route key={page.route} path={page.route} component={page.component} exact />) }
           <Redirect from='*' to='/' />
