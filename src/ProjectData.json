@@ -25,7 +25,7 @@
   },
   {
     "name": "Cowsay for Android",
-    "description": "",
+    "description": "A port for the popular cowsay application to android.",
     "coverImageUrl": "./projects/cowsay_for_android/cover.svg",
     "projectUrl": "https://github.com/tutkowskim/AndroidCowsay"
   }
