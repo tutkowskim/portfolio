@@ -3,7 +3,8 @@
     "name": "Portfolio",
     "description": "A portfolio of my personal projects.",
     "coverImageUrl": "./projects/portfolio/cover.png",
-    "projectUrl": "https://github.com/tutkowskim/portfolio"
+    "projectUrl": "https://github.com/tutkowskim/portfolio",
+    "productionUrl": "https://www.tutkowski.com"
   },
   {
     "name": "Resume",
@@ -21,12 +22,14 @@
     "name": "Scrum Poker",
     "description": "A planning tool for the scrum development used for estimating work.",
     "coverImageUrl": "./projects/scrum_poker/cover.svg",
-    "projectUrl": "https://github.com/tutkowskim/ScrumPoker"
+    "projectUrl": "https://github.com/tutkowskim/ScrumPoker",
+    "productionUrl": "https://play.google.com/store/apps/details?id=poker.scrum.tutkowski.scrumpoker"
   },
   {
     "name": "Cowsay for Android",
     "description": "A port for the popular cowsay application to android.",
     "coverImageUrl": "./projects/cowsay_for_android/cover.svg",
-    "projectUrl": "https://github.com/tutkowskim/AndroidCowsay"
+    "projectUrl": "https://github.com/tutkowskim/AndroidCowsay",
+    "productionUrl": "https://play.google.com/store/apps/details?id=cowsay.andriod.tutkowskim.androidcowsay"
   }
 ]

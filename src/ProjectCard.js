@@ -22,8 +22,9 @@ const useStyles = makeStyles({
 
 function ProjectCard(props) {
   const classes = useStyles();
-  const { name, coverImageUrl, description, projectUrl } = props;
+  const { name, coverImageUrl, description, projectUrl, productionUrl } = props;
   const openProject = () => window.open(projectUrl, '_blank');
+  const viewProject = () => window.open(productionUrl, '_blank');
 
   return (
     <Card className={classes.root}>
@@ -35,6 +36,7 @@ function ProjectCard(props) {
         </CardContent>
       </CardActionArea>
       <CardActions>
+        { productionUrl ? <Button size="small" color="primary" onClick={viewProject}>View</Button> : <></> }
         <Button size="small" color="primary" onClick={openProject}>Learn More</Button>
       </CardActions>
     </Card>
