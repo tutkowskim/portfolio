@@ -6,9 +6,27 @@
     "projectUrl": "https://github.com/tutkowskim/portfolio"
   },
   {
+    "name": "Resume",
+    "description": "My resume written in plain HTML and CSS.",
+    "coverImageUrl": "./projects/resume/cover.png",
+    "projectUrl": "https://github.com/tutkowskim/resume"
+  },
+  {
     "name": "Kopps Flavor Forecast API",
     "description": "An api to query the custard flavor forecast at the Kopps resturants around Milwaukee.",
     "coverImageUrl": "./projects/kopps_flavor_forecast_api/cover.svg",
     "projectUrl": "https://github.com/tutkowskim/kopps-flavor-forcast-api"
+  },
+  {
+    "name": "Scrum Poker",
+    "description": "A planning tool for the scrum development used for estimating work.",
+    "coverImageUrl": "./projects/scrum_poker/cover.svg",
+    "projectUrl": "https://github.com/tutkowskim/ScrumPoker"
+  },
+  {
+    "name": "Cowsay for Android",
+    "description": "",
+    "coverImageUrl": "./projects/cowsay_for_android/cover.svg",
+    "projectUrl": "https://github.com/tutkowskim/AndroidCowsay"
   }
 ]
