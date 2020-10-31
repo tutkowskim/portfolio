@@ -4,8 +4,8 @@ import ProjectsRouteInfo from './ProjectsRouteInfo';
 
 const Pages = [
   AboutMeRouteInfo,
-  ContactMeRouteInfo,
   ProjectsRouteInfo,
+  ContactMeRouteInfo,
 ];
 
 export default Pages;
