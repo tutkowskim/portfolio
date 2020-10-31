@@ -29,7 +29,7 @@ function AboutMe() {
   return (
     <div className={classes.aboutMe}>
       <Typography variant="h6">Hello, my name is Mark Tutkowski.</Typography>
-      <Typography variant="subtitle1">I&apos;m a Full Stack Software Enginner with a passion for web & mobile development.</Typography>
+      <Typography variant="subtitle1">I&apos;m a Full Stack Software Engineer with a passion for web & mobile development.</Typography>
       <Typography variant="subtitle1">
         Feel free to check out some of my
         <Link href="#" onClick={openProjectsPage}> projects</Link>
