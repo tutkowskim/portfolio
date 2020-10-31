@@ -1,5 +1,8 @@
 import React from 'react';
-import { Route, Switch, Redirect, useHistory } from 'react-router-dom';
+import {
+  Route, Switch, Redirect, useHistory,
+} from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 import AppBar from '@material-ui/core/AppBar';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -20,7 +23,7 @@ import Brightness4Icon from '@material-ui/icons/Brightness4';
 import Brightness7Icon from '@material-ui/icons/Brightness7';
 import MenuIcon from '@material-ui/icons/Menu';
 
-import { Pages } from './Pages';
+import Pages from './Pages';
 import useLocalStorage from './useLocalStorage';
 import useWindowSize from './useWindowSize';
 
@@ -29,15 +32,15 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
   app: {
-    display: "flex",
-    flexDirection: "column",
-    height: "100vh",
+    display: 'flex',
+    flexDirection: 'column',
+    height: '100vh',
   },
   toolBar: {
-    height: "64px",
+    height: '64px',
   },
   drawerList: {
-    width: "250px",
+    width: '250px',
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -46,7 +49,7 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
   appContent: {
-    flexBasis: "calc(100% - 64px)",
+    flexBasis: 'calc(100% - 64px)',
     flexGrow: 1,
     flexShrink: 1,
   },
@@ -61,6 +64,11 @@ function DarkModeToggleButton(props) {
   );
 }
 
+DarkModeToggleButton.propTypes = {
+  isDarkMode: PropTypes.bool.isRequired,
+  onToggleDarkMode: PropTypes.func.isRequired,
+};
+
 function ThemedApp(props) {
   const { isDarkMode, toggleDarkMode } = props;
 
@@ -72,57 +80,67 @@ function ThemedApp(props) {
   const changePage = (route) => {
     history.push(route);
     setShowDrawer(false);
-  }
+  };
 
   return (
     <div className={classes.app}>
       <AppBar position="static">
         <Toolbar className={classes.toolBar}>
           <Typography variant="h6" className={classes.title}>Mark Tutkowski</Typography>
-          {windowSize.width > 600 ? <>
-            { Pages.map(page => <Button key={page.name} className={classes.menuButton} color="inherit" onClick={ () => changePage(page.route) }>{page.name}</Button>) }
-            <DarkModeToggleButton isDarkMode={isDarkMode} onToggleDarkMode={toggleDarkMode} />
-          </> : <>
-            <DarkModeToggleButton isDarkMode={isDarkMode} onToggleDarkMode={toggleDarkMode} />
-            <IconButton edge="start" color="inherit" aria-label="open drawer" onClick={() => setShowDrawer(!showDrawer)}>
-              <MenuIcon />
-            </IconButton>
-            <Drawer anchor='right' open={showDrawer} onClose={() => setShowDrawer(false)}>
-              <List className={classes.drawerList}>
-                { Pages.map(page => <ListItem button key={page.name} onClick={ () => changePage(page.route) }><ListItemText primary={page.name} /></ListItem>) }
-              </List>
-            </Drawer>
-          </>}
+          {windowSize.width > 600 ? (
+            <>
+              { Pages.map((page) => <Button key={page.name} className={classes.menuButton} color="inherit" onClick={() => changePage(page.route)}>{page.name}</Button>) }
+              <DarkModeToggleButton isDarkMode={isDarkMode} onToggleDarkMode={toggleDarkMode} />
+            </>
+          ) : (
+            <>
+              <DarkModeToggleButton isDarkMode={isDarkMode} onToggleDarkMode={toggleDarkMode} />
+              <IconButton edge="start" color="inherit" aria-label="open drawer" onClick={() => setShowDrawer(!showDrawer)}>
+                <MenuIcon />
+              </IconButton>
+              <Drawer anchor="right" open={showDrawer} onClose={() => setShowDrawer(false)}>
+                <List className={classes.drawerList}>
+                  { Pages.map((page) => 
+                    <ListItem button key={page.name} onClick={() => changePage(page.route)}><ListItemText primary={page.name} /></ListItem>)
+                  }
+                </List>
+              </Drawer>
+            </>
+          )}
         </Toolbar>
       </AppBar>
       <Container className={classes.appContent} maxWidth="lg">
         <Switch>
-          { Pages.map(page => <Route key={page.route} path={page.route} component={page.component} exact />) }
-          <Redirect from='*' to='/' />
+          { Pages.map((page) => <Route key={page.route} path={page.route} component={page.component} exact />) }
+          <Redirect from="*" to="/" />
         </Switch>
       </Container>
     </div>
   );
 }
 
+ThemedApp.propTypes = {
+  isDarkMode: PropTypes.bool.isRequired,
+  toggleDarkMode: PropTypes.func.isRequired,
+};
+
 function App() {
   const [prefersDarkMode, setPrefersDarkMode] = useLocalStorage('prefersDarkMode', false);
   const toggleDarkMode = () => setPrefersDarkMode(!prefersDarkMode);
 
   const theme = React.useMemo(
-    () =>
-      createMuiTheme({
-        palette: {
-          type: prefersDarkMode ? 'dark' : 'light',
-          primary: blueGrey,
-        },
-      }),
+    () => createMuiTheme({
+      palette: {
+        type: prefersDarkMode ? 'dark' : 'light',
+        primary: blueGrey,
+      },
+    }),
     [prefersDarkMode],
   );
 
   return (
     <ThemeProvider theme={theme}>
-      <CssBaseline/>
+      <CssBaseline />
       <ThemedApp isDarkMode={prefersDarkMode} toggleDarkMode={toggleDarkMode} />
     </ThemeProvider>
   );

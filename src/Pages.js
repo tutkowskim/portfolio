@@ -1,27 +1,11 @@
-import AboutMe from './AboutMe';
-import ContactMe from './ContactMe';
-import Projects from './Projects';
+import AboutMeRouteInfo from './AboutMeRouteInfo';
+import ContactMeRouteInfo from './ContactMeRouteInfo';
+import ProjectsRouteInfo from './ProjectsRouteInfo';
 
-export const AboutMePage = {
-  route: '/',
-  name: 'Home',
-  component: AboutMe,
-};
-
-export const ContactMePage = {
-  route: '/contact-me',
-  name: 'Contact Me',
-  component: ContactMe,
-}
-
-export const ProjectsPage = {
-  route: '/projects',
-  name: 'Projects',
-  component: Projects,
-};
-
-export const Pages = [
-  AboutMePage,
-  ProjectsPage,
-  ContactMePage,
+const Pages = [
+  AboutMeRouteInfo,
+  ContactMeRouteInfo,
+  ProjectsRouteInfo,
 ];
+
+export default Pages;

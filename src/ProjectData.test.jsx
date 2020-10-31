@@ -9,17 +9,17 @@ test('verify the project data is a non-empty array', () => {
   expect(ProjectData.length > 0).toBe(true);
 });
 
-ProjectData.forEach(project => {
+ProjectData.forEach((project) => {
   test(`check all fields are valid in ${JSON.stringify(project)}`, () => {
-    Object.keys(project).forEach(field => {
+    Object.keys(project).forEach((field) => {
       expect(validFields.includes(field)).toBeTruthy();
     });
   });
 
   test(`check required fields exist in ${JSON.stringify(project)}`, () => {
-    requiredFields.forEach(field => {
+    requiredFields.forEach((field) => {
       expect(project[field]).toBeTruthy();
-      expect(typeof project[field] == 'string').toBeTruthy();
+      expect(typeof project[field] === 'string').toBeTruthy();
     });
   });
 });
