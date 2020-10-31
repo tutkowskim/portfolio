@@ -54,4 +54,8 @@ ProjectCard.propTypes = {
   productionUrl: PropTypes.string,
 };
 
+ProjectCard.defaultProps = {
+  productionUrl: null,
+};
+
 export default ProjectCard;

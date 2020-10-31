@@ -24,6 +24,8 @@ function AboutMe() {
   const openProjectsPage = () => history.push(ProjectsRouteInfo.route);
   const openContactMePage = () => history.push(ContactMeRouteInfo.route);
 
+  /* eslint-disable jsx-a11y/anchor-is-valid */
+  /* we are using the material-ui link and not the router link */
   return (
     <div className={classes.aboutMe}>
       <Typography variant="h6">Hello, my name is Mark Tutkowski.</Typography>

@@ -26,7 +26,17 @@ function Projects() {
     <div className={classes.projects}>
       <Typography variant="h4" className={classes.projectsTitle}>Projects</Typography>
       <Grid container justify="center" alignItems="center" spacing={3}>
-        { ProjectData.map((project) => <Grid key={project.name} item><ProjectCard {...project} /></Grid>) }
+        { ProjectData.map((project) => (
+          <Grid key={project.name} item>
+            <ProjectCard
+              name={project.name}
+              coverImageUrl={project.coverImageUrl}
+              description={project.description}
+              projectUrl={project.projectUrl}
+              productionUrl={project.productionUrl}
+            />
+          </Grid>
+        ))}
       </Grid>
     </div>
   );

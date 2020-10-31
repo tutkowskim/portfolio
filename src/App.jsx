@@ -1,6 +1,9 @@
 import React from 'react';
 import {
-  Route, Switch, Redirect, useHistory,
+  Route,
+  Switch,
+  Redirect,
+  useHistory,
 } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
@@ -100,9 +103,11 @@ function ThemedApp(props) {
               </IconButton>
               <Drawer anchor="right" open={showDrawer} onClose={() => setShowDrawer(false)}>
                 <List className={classes.drawerList}>
-                  { Pages.map((page) => 
-                    <ListItem button key={page.name} onClick={() => changePage(page.route)}><ListItemText primary={page.name} /></ListItem>)
-                  }
+                  { Pages.map((page) => (
+                    <ListItem button key={page.name} onClick={() => changePage(page.route)}>
+                      <ListItemText primary={page.name} />
+                    </ListItem>
+                  ))}
                 </List>
               </Drawer>
             </>
@@ -111,7 +116,14 @@ function ThemedApp(props) {
       </AppBar>
       <Container className={classes.appContent} maxWidth="lg">
         <Switch>
-          { Pages.map((page) => <Route key={page.route} path={page.route} component={page.component} exact />) }
+          { Pages.map((page) => (
+            <Route
+              key={page.route}
+              path={page.route}
+              component={page.component}
+              exact
+            />
+          ))}
           <Redirect from="*" to="/" />
         </Switch>
       </Container>
