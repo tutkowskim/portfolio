@@ -74,6 +74,7 @@ DarkModeToggleButton.propTypes = {
 
 function ThemedApp(props) {
   const { isDarkMode, toggleDarkMode } = props;
+  const visibleNavRoutes = Pages.filter((routeInfo) => routeInfo.visibleRoute);
 
   const classes = useStyles();
   const history = useHistory();
@@ -92,7 +93,7 @@ function ThemedApp(props) {
           <Typography variant="h6" className={classes.title}>Mark Tutkowski</Typography>
           {windowSize.width > 600 ? (
             <>
-              { Pages.map((page) => <Button key={page.name} className={classes.menuButton} color="inherit" onClick={() => changePage(page.route)}>{page.name}</Button>) }
+              { visibleNavRoutes.map((page) => <Button key={page.name} className={classes.menuButton} color="inherit" onClick={() => changePage(page.route)}>{page.name}</Button>) }
               <DarkModeToggleButton isDarkMode={isDarkMode} onToggleDarkMode={toggleDarkMode} />
             </>
           ) : (
@@ -103,7 +104,7 @@ function ThemedApp(props) {
               </IconButton>
               <Drawer anchor="right" open={showDrawer} onClose={() => setShowDrawer(false)}>
                 <List className={classes.drawerList}>
-                  { Pages.map((page) => (
+                  { visibleNavRoutes.map((page) => (
                     <ListItem button key={page.name} onClick={() => changePage(page.route)}>
                       <ListItemText primary={page.name} />
                     </ListItem>
