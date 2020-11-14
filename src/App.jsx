@@ -26,7 +26,7 @@ import Brightness4Icon from '@material-ui/icons/Brightness4';
 import Brightness7Icon from '@material-ui/icons/Brightness7';
 import MenuIcon from '@material-ui/icons/Menu';
 
-import Pages from './Pages';
+import routes from './routes';
 import useLocalStorage from './useLocalStorage';
 import useWindowSize from './useWindowSize';
 
@@ -74,7 +74,7 @@ DarkModeToggleButton.propTypes = {
 
 function ThemedApp(props) {
   const { isDarkMode, toggleDarkMode } = props;
-  const visibleNavRoutes = Pages.filter((routeInfo) => routeInfo.visibleRoute);
+  const visibleRoutes = routes.filter((routeInfo) => routeInfo.visibleRoute);
 
   const classes = useStyles();
   const history = useHistory();
@@ -93,7 +93,7 @@ function ThemedApp(props) {
           <Typography variant="h6" className={classes.title}>Mark Tutkowski</Typography>
           {windowSize.width > 600 ? (
             <>
-              { visibleNavRoutes.map((page) => <Button key={page.name} className={classes.menuButton} color="inherit" onClick={() => changePage(page.route)}>{page.name}</Button>) }
+              { visibleRoutes.map((page) => <Button key={page.name} className={classes.menuButton} color="inherit" onClick={() => changePage(page.route)}>{page.name}</Button>) }
               <DarkModeToggleButton isDarkMode={isDarkMode} onToggleDarkMode={toggleDarkMode} />
             </>
           ) : (
@@ -104,7 +104,7 @@ function ThemedApp(props) {
               </IconButton>
               <Drawer anchor="right" open={showDrawer} onClose={() => setShowDrawer(false)}>
                 <List className={classes.drawerList}>
-                  { visibleNavRoutes.map((page) => (
+                  { visibleRoutes.map((page) => (
                     <ListItem button key={page.name} onClick={() => changePage(page.route)}>
                       <ListItemText primary={page.name} />
                     </ListItem>
@@ -117,7 +117,7 @@ function ThemedApp(props) {
       </AppBar>
       <Container className={classes.appContent} maxWidth="lg">
         <Switch>
-          { Pages.map((page) => (
+          { routes.map((page) => (
             <Route
               key={page.route}
               path={page.route}
