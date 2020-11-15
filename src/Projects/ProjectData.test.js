@@ -1,6 +1,6 @@
 import ProjectData from './ProjectData.json';
 
-const requiredFields = ['name', 'description', 'coverImageUrl', 'projectUrl'];
+const requiredFields = ['name', 'description', 'coverImageUrl', 'projectUrl', 'technologies'];
 const optionalFields = ['productionUrl'];
 const validFields = [...requiredFields, ...optionalFields];
 
@@ -19,7 +19,6 @@ ProjectData.forEach((project) => {
   test(`check required fields exist in ${JSON.stringify(project)}`, () => {
     requiredFields.forEach((field) => {
       expect(project[field]).toBeTruthy();
-      expect(typeof project[field] === 'string').toBeTruthy();
     });
   });
 });
