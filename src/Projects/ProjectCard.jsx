@@ -1,4 +1,5 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
@@ -8,6 +9,8 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+
+import { getProjectRoute } from './ProjectDetailsRouteInfo';
 
 const useStyles = makeStyles({
   root: {
@@ -23,10 +26,12 @@ const useStyles = makeStyles({
 
 function ProjectCard(props) {
   const classes = useStyles();
+  const history = useHistory();
   const {
-    name, coverImageUrl, description, projectUrl, productionUrl,
+    name, coverImageUrl, description, productionUrl,
   } = props;
-  const openProject = () => window.open(projectUrl, '_blank');
+
+  const openProject = () => history.push(getProjectRoute(name));
   const viewProject = () => window.open(productionUrl, '_blank');
 
   return (
@@ -50,7 +55,6 @@ ProjectCard.propTypes = {
   name: PropTypes.string.isRequired,
   coverImageUrl: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  projectUrl: PropTypes.string.isRequired,
   productionUrl: PropTypes.string,
 };
 

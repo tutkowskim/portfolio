@@ -1,0 +1,53 @@
+[
+  {
+    "name": "Portfolio",
+    "description": "A portfolio of my personal projects.",
+    "detailedDescription": "I've always been interested in having my own website, however I wasn't sure what I wanted my web presence to be. While learning about the react framework I decided to apply what I was learning to create a portfolio website to showcase my personal projects. In the future this may morph into a blog, however for now it is a landing page for things I've accomplished.",
+    "coverImageUrl": "/projects/portfolio/cover.png",
+    "carouselImages": ["/projects/portfolio/page1.png", "/projects/portfolio/page2.png", "/projects/portfolio/page3.png"],
+    "projectUrl": "https://github.com/tutkowskim/portfolio",
+    "productionUrl": "https://www.tutkowski.com",
+    "technologies": ["HTML", "CSS", "Javascript", "React", "Material UI"]
+  },
+  {
+    "name": "Resume",
+    "description": "My resume written in plain HTML and CSS.",
+    "detailedDescription": "My resume written in HTML and CSS. I was motivated to do this instead of creating a word document after reading several blog posts which encouraged me to use the same styling and versioning tools for my resume that I would use on the job.",
+    "coverImageUrl": "/projects/resume/cover.png",
+    "carouselImages": ["/projects/resume/resume.png"],
+    "projectUrl": "https://github.com/tutkowskim/resume",
+    "technologies": ["HTML", "CSS"]
+  },
+  {
+    "name": "Kopps Flavor Forecast API",
+    "description": "An api to query the custard flavor forecast at the Kopps restaurants around Milwaukee.",
+    "detailedDescription": "An api to query the custard flavor forecast at the Kopps restaurants around Milwaukee, which scrapes https://www.kopps.com/flavor-preview to provide a more api friendly result.",
+    "coverImageUrl": "/projects/kopps_flavor_forecast_api/cover.svg",
+    "carouselImages": ["/projects/kopps_flavor_forecast_api/cover.svg"],
+    "projectUrl": "https://github.com/tutkowskim/kopps-flavor-forcast-api",
+    "technologies": ["Typescript", "NodeJS"]
+  },
+  {
+    "name": "Scrum Poker",
+    "description": "A planning tool for the scrum development used for estimating work.",
+    "detailedDescription": "A light weight scrum poker planning application. I was motivated to create this application, because the scrum poker app that I had been using started to slow down with un-needed animations and ads, so I decided to create my own.",
+    "coverImageUrl": "/projects/scrum_poker/cover.png",
+    "carouselImages": [
+      "/projects/scrum_poker/deck_view.png",
+      "/projects/scrum_poker/card_view.png"
+    ],
+    "projectUrl": "https://github.com/tutkowskim/ScrumPoker",
+    "productionUrl": "https://play.google.com/store/apps/details?id=poker.scrum.tutkowski.scrumpoker",
+    "technologies": ["Android", "Java"]
+  },
+  {
+    "name": "Cowsay for Android",
+    "description": "A port for the popular cowsay application to android.",
+    "detailedDescription": "This application generates cowsay messages and allows the user to share it in raw text format or as an image.",
+    "coverImageUrl": "/projects/cowsay_for_android/cover.png",
+    "carouselImages": ["/projects/cowsay_for_android/cowsay_view.png"],
+    "projectUrl": "https://github.com/tutkowskim/AndroidCowsay",
+    "productionUrl": "https://play.google.com/store/apps/details?id=cowsay.andriod.tutkowskim.androidcowsay",
+    "technologies": ["Android", "Java"]
+  }
+]

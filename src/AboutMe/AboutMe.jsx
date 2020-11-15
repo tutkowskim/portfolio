@@ -5,8 +5,8 @@ import Link from '@material-ui/core/Link';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 
-import ContactMeRouteInfo from './ContactMeRouteInfo';
-import ProjectsRouteInfo from './ProjectsRouteInfo';
+import ContactMeRouteInfo from '../ContactMe/ContactMeRouteInfo';
+import ProjectsRouteInfo from '../Projects/ProjectsRouteInfo';
 
 const useStyles = makeStyles(() => ({
   aboutMe: {
