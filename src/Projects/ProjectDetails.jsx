@@ -1,9 +1,10 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import { Button } from '@material-ui/core';
 import { Carousel } from 'react-responsive-carousel';
-import "react-responsive-carousel/lib/styles/carousel.min.css";
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 import ProjectData from './ProjectData.json';
 
@@ -26,8 +27,9 @@ const useStyles = makeStyles(() => ({
 function Projects(props) {
   const classes = useStyles();
 
-  const requestedProjectName = props.match.params.name;
-  const project = ProjectData.find(project => project.name === requestedProjectName);
+  const { match } = props;
+  const requestedProjectName = match.params.name;
+  const project = ProjectData.find((p) => p.name === requestedProjectName);
   if (!project) {
     return (
       <div className={classes.projectNotFound}>
@@ -44,18 +46,14 @@ function Projects(props) {
       <Typography variant="h4" className={classes.projectsTitle}>{ project.name }</Typography>
 
       <div className={classes.section}>
-        <Carousel showArrows={true} showStatus={false} showThumbs={false}>
-          <img src={project.coverImageUrl}></img>
-          <img src={project.coverImageUrl}></img>
-          <img src={project.coverImageUrl}></img>
-          <img src={project.coverImageUrl}></img>
-          <img src={project.coverImageUrl}></img>
+        <Carousel showArrows showStatus={false} showThumbs={false}>
+          { project.carouselImages.map((image) => <div key={image}><img alt="" src={image} /></div>) }
         </Carousel>
       </div>
 
       <div className={classes.section}>
         <Typography variant="h6">About</Typography>
-        <Typography variant="body1" className={classes.generalSectionDescription}>Add a detailed description here</Typography>
+        <Typography variant="body1">{ project.detailedDescription }</Typography>
       </div>
 
       <div className={classes.section}>
@@ -73,5 +71,9 @@ function Projects(props) {
     </>
   );
 }
+
+Projects.propTypes = {
+  match: PropTypes.shape().isRequired,
+};
 
 export default Projects;

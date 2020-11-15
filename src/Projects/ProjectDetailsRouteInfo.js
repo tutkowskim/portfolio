@@ -7,8 +7,6 @@ const ProjectDetailsRouteInfo = {
   component: ProjectDetails,
 };
 
-export const getProjectRoute = (projectName) => {
-  return ProjectDetailsRouteInfo.route.replace(':name', projectName);
-}
+export const getProjectRoute = (projectName) => ProjectDetailsRouteInfo.route.replace(':name', projectName);
 
 export default ProjectDetailsRouteInfo;

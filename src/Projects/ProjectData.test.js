@@ -1,6 +1,6 @@
 import ProjectData from './ProjectData.json';
 
-const requiredFields = ['name', 'description', 'coverImageUrl', 'projectUrl', 'technologies'];
+const requiredFields = ['name', 'description', 'detailedDescription', 'coverImageUrl', 'carouselImages', 'projectUrl', 'technologies'];
 const optionalFields = ['productionUrl'];
 const validFields = [...requiredFields, ...optionalFields];
 

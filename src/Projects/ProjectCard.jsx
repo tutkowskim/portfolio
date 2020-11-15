@@ -27,7 +27,9 @@ const useStyles = makeStyles({
 function ProjectCard(props) {
   const classes = useStyles();
   const history = useHistory();
-  const { name, coverImageUrl, description, productionUrl } = props;
+  const {
+    name, coverImageUrl, description, productionUrl,
+  } = props;
 
   const openProject = () => history.push(getProjectRoute(name));
   const viewProject = () => window.open(productionUrl, '_blank');
@@ -53,7 +55,6 @@ ProjectCard.propTypes = {
   name: PropTypes.string.isRequired,
   coverImageUrl: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  projectUrl: PropTypes.string.isRequired,
   productionUrl: PropTypes.string,
 };
 
