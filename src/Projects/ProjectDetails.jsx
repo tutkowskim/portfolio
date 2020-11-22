@@ -23,7 +23,7 @@ const useStyles = makeStyles(() => ({
     padding: '5px',
   },
   imgCarousel: {
-    maxWidth: '500px',
+    maxWidth: '800px',
     margin: 'auto',
   },
 }));
