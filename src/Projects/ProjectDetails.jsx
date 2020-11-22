@@ -22,6 +22,10 @@ const useStyles = makeStyles(() => ({
   section: {
     padding: '5px',
   },
+  imgCarousel: {
+    maxWidth: '500px',
+    margin: 'auto',
+  },
 }));
 
 function Projects(props) {
@@ -46,7 +50,7 @@ function Projects(props) {
       <Typography variant="h4" className={classes.projectsTitle}>{ project.name }</Typography>
 
       <div className={classes.section}>
-        <Carousel showArrows showStatus={false} showThumbs={false}>
+        <Carousel className={classes.imgCarousel} showArrows showStatus={false} showThumbs={false}>
           { project.carouselImages.map((image) => <div key={image}><img alt="" src={image} /></div>) }
         </Carousel>
       </div>
