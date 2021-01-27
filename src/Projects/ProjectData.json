@@ -20,13 +20,22 @@
   },
   {
     "name": "Task Tracker",
-    "description": "A virutal checklist also known as a TODO application.",
-    "detailedDescription": "A virutal checklist also known as a TODO application, which I wrote in order to explore the services Azure Static Web Apps, Azure Functions, and Azure Cosmos DB.",
+    "description": "A virtual checklist also known as a TODO application.",
+    "detailedDescription": "A virtual checklist also known as a TODO application, which I wrote in order to explore the services Azure Static Web Apps, Azure Functions, and Azure Cosmos DB.",
     "coverImageUrl": "/projects/task_tracker/cover.png",
     "carouselImages": ["/projects/task_tracker/task_page.png"],
     "projectUrl": "https://github.com/tutkowskim/TaskTracker",
     "productionUrl": "https://www.tasks.tutkowski.com",
     "technologies": ["HTML", "CSS", "Javascript", "Angular", "Material UI", "Azure Functions", "Azure Cosmos DB", "Azure Static Web App", "Azure Functions"]
+  },
+  {
+    "name": "Kopps Flavor Forecast iOS",
+    "description": "An iOS application to display the custard flavor forecast at the Kopps restaurants around Milwaukee.",
+    "detailedDescription": "An iOS application I wrote while learning SwiftUI that displays the custard flavor forecast for the restaurant Kopps.",
+    "coverImageUrl": "/projects/kopps_flavor_forecast_ios/cover.png",
+    "carouselImages": ["/projects/kopps_flavor_forecast_ios/flavor_forecast_list_view.png", "/projects/kopps_flavor_forecast_ios/flavor_detail_view.png"],
+    "projectUrl": "https://github.com/tutkowskim/kopps-flavor-forcast-ios",
+    "technologies": ["Swift", "SwiftUI", "iOS"]
   },
   {
     "name": "Kopps Flavor Forecast API",
