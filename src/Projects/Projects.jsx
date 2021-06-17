@@ -1,44 +1,77 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import Chip from '@material-ui/core/Chip'
-import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
+import { useHistory } from 'react-router-dom';
 
-import ProjectCard from './ProjectCard';
+import {
+  Paper,
+  Chip,
+  Typography,
+  makeStyles,
+  useTheme,
+} from '@material-ui/core';
+
 import ProjectData from './ProjectData.json';
+import { getProjectRoute } from './ProjectDetailsRouteInfo';
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
   projects: {
-    height: '100%',
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'center',
   },
-  projectsTitle: {
-    textAlign: 'center',
-    padding: '10px',
+  project: {
+    margin: '10px',
+    display: 'flex',
+    flexDirection: 'row',
+    '&:hover': {
+      background: theme.palette.text.secondary,
+    },
+  },
+  projectImage: {
+    margin: '10px',
+    height: '105px',
+    width: '258.75px',
+  },
+  projectText: {
+    margin: '10px',
+  },
+  chip: {
+    marginLeft: '5px',
+    marginBottom: '5px',
   },
 }));
 
 function Projects() {
   const classes = useStyles();
+  const history = useHistory();
+  const navigateToProject = (project) => history.push(getProjectRoute(project.name));
+  const handleKeyPress = (event, project) => {
+    if (event.keyCode === 13) {
+      event.preventDefault();
+      navigateToProject(project);
+    }
+  };
 
   return (
-    <div>
-      <div style={{display: 'flex', flexDirection: 'column'}}>
-        {ProjectData.map(project => (
-          <div style={{ display: 'flex' }}>
-            <img height="105" width="258.75" src={project.coverImageUrl} />
-            <div>
-              <Typography variant="h5">{project.name}</Typography>
-              <Typography variant="body1">{project.description}</Typography>
-              {project.technologies.map(tech => (
-                <Chip variant="outlined" size="small" label={tech} />
-              ))}
-            </div>
+    <div className={classes.projects}>
+      {ProjectData.map((project) => (
+        <Paper
+          key={project.name}
+          className={classes.project}
+          bgcolor="pink"
+          borderColor="green"
+          border=""
+          onClick={() => navigateToProject(project)}
+          onKeyPress={(event) => handleKeyPress(event, project)}
+        >
+          <img className={classes.projectImage} src={project.coverImageUrl} alt={project.name} />
+          <div>
+            <Typography className={classes.projectText} variant="h5">{project.name}</Typography>
+            <Typography className={classes.projectText} variant="body1">{project.description}</Typography>
+            {project.technologies.map((tech) => (
+              <Chip key={tech} className={classes.chip} variant="outlined" size="small" label={tech} />
+            ))}
           </div>
-        ))}
-      </div>
+        </Paper>
+      ))}
     </div>
   );
 }
