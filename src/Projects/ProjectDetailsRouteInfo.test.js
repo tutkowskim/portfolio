@@ -1,9 +1,9 @@
 import { getProjectRoute } from './ProjectDetailsRouteInfo';
 
 const TEST_DATA = [
-  { projectName: 'TestProject', expectedRoute: '/project/TestProject' },
-  { projectName: 'Test Project', expectedRoute: '/project/Test Project' },
-  { projectName: ' Test  Project ', expectedRoute: '/project/ Test  Project ' },
+  { projectName: 'TestProject', expectedRoute: '/projects/TestProject' },
+  { projectName: 'Test Project', expectedRoute: '/projects/Test Project' },
+  { projectName: ' Test  Project ', expectedRoute: '/projects/ Test  Project ' },
 ];
 
 TEST_DATA.forEach((testData) => {
