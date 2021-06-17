@@ -1,5 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import Chip from '@material-ui/core/Chip'
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 
@@ -23,21 +24,21 @@ function Projects() {
   const classes = useStyles();
 
   return (
-    <div className={classes.projects}>
-      <Typography variant="h4" className={classes.projectsTitle}>Projects</Typography>
-      <Grid container justify="center" alignItems="center" spacing={3}>
-        { ProjectData.map((project) => (
-          <Grid key={project.name} item>
-            <ProjectCard
-              name={project.name}
-              coverImageUrl={project.coverImageUrl}
-              description={project.description}
-              projectUrl={project.projectUrl}
-              productionUrl={project.productionUrl}
-            />
-          </Grid>
+    <div>
+      <div style={{display: 'flex', flexDirection: 'column'}}>
+        {ProjectData.map(project => (
+          <div style={{ display: 'flex' }}>
+            <img height="105" width="258.75" src={project.coverImageUrl} />
+            <div>
+              <Typography variant="h5">{project.name}</Typography>
+              <Typography variant="body1">{project.description}</Typography>
+              {project.technologies.map(tech => (
+                <Chip variant="outlined" size="small" label={tech} />
+              ))}
+            </div>
+          </div>
         ))}
-      </Grid>
+      </div>
     </div>
   );
 }

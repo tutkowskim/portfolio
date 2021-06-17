@@ -54,7 +54,6 @@ function ContactMe() {
   const classes = useStyles();
   return (
     <div className={classes.contactMe}>
-      <Typography variant="h4">Contact Me</Typography>
       <div className={classes.socialMediaList}>
         { socialMediaLinks.map((socialMediaLink) => (
           <a key={socialMediaLink.name} className={classes.socialMediaListItem} target="_blank" rel="noopener noreferrer" href={socialMediaLink.profileUrl}>

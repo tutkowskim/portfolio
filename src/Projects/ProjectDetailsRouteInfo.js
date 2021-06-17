@@ -1,7 +1,7 @@
 import ProjectDetails from './ProjectDetails';
 
 const ProjectDetailsRouteInfo = {
-  route: '/project/:name',
+  route: '/projects/:name',
   name: undefined,
   visibleRoute: false,
   component: ProjectDetails,

@@ -26,6 +26,7 @@ import Brightness4Icon from '@material-ui/icons/Brightness4';
 import Brightness7Icon from '@material-ui/icons/Brightness7';
 import MenuIcon from '@material-ui/icons/Menu';
 
+import AppBreadcrumbs from './AppBreadcrumbs'
 import routes from './routes';
 import useLocalStorage from './useLocalStorage';
 import useWindowSize from './useWindowSize';
@@ -115,6 +116,7 @@ function ThemedApp(props) {
           )}
         </Toolbar>
       </AppBar>
+      <AppBreadcrumbs />
       <Container className={classes.appContent} maxWidth="lg">
         <Switch>
           { routes.map((page) => (
