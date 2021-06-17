@@ -32,10 +32,10 @@ function AboutMe() {
       <Typography variant="subtitle1">I&apos;m a Full Stack Software Engineer with a passion for web & mobile development.</Typography>
       <Typography variant="subtitle1">
         Feel free to check out some of my
-        <Link href="#" onClick={openProjectsPage}> projects</Link>
+        <Link onClick={openProjectsPage}> projects</Link>
         {' '}
         or
-        <Link href="#" onClick={openContactMePage}> connect</Link>
+        <Link onClick={openContactMePage}> connect</Link>
         !
       </Typography>
     </div>
