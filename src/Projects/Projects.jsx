@@ -6,7 +6,6 @@ import {
   Chip,
   Typography,
   makeStyles,
-  useTheme,
 } from '@material-ui/core';
 
 import ProjectData from './ProjectData.json';
