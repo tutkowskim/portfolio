@@ -20,6 +20,9 @@ const useStyles = makeStyles((theme) => ({
     margin: '10px',
     display: 'flex',
     flexDirection: 'row',
+    [theme.breakpoints.between('xs', 'sm')]: {
+      flexDirection: 'column',
+    },
     '&:hover': {
       background: theme.palette.text.secondary,
     },
@@ -28,13 +31,28 @@ const useStyles = makeStyles((theme) => ({
     margin: '10px',
     height: '105px',
     width: '258.75px',
+    [theme.breakpoints.between('xs', 'sm')]: {
+      display: 'block',
+      marginLeft: 'auto',
+      marginRight: 'auto',
+    },
   },
   projectText: {
     margin: '10px',
+    [theme.breakpoints.between('xs', 'sm')]: {
+      textAlign: 'center',
+    },
+  },
+  chips: {
+    [theme.breakpoints.between('xs', 'sm')]: {
+      display: 'flex',
+      justifyContent: 'center',
+      flexWrap: 'wrap',
+    },
   },
   chip: {
-    marginLeft: '5px',
-    marginBottom: '5px',
+    marginLeft: '10px',
+    marginBottom: '10px',
   },
 }));
 
@@ -62,9 +80,11 @@ function Projects() {
           <div>
             <Typography className={classes.projectText} variant="h5">{project.name}</Typography>
             <Typography className={classes.projectText} variant="body1">{project.description}</Typography>
-            {project.technologies.map((tech) => (
-              <Chip key={tech} className={classes.chip} variant="outlined" size="small" label={tech} />
-            ))}
+            <div className={classes.chips}>
+              {project.technologies.map((tech) => (
+                <Chip key={tech} className={classes.chip} variant="outlined" size="small" label={tech} />
+              ))}
+            </div>
           </div>
         </Paper>
       ))}
