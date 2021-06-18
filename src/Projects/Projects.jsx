@@ -55,9 +55,6 @@ function Projects() {
         <Paper
           key={project.name}
           className={classes.project}
-          bgcolor="pink"
-          borderColor="green"
-          border=""
           onClick={() => navigateToProject(project)}
           onKeyPress={(event) => handleKeyPress(event, project)}
         >

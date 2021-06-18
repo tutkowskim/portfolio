@@ -26,7 +26,7 @@
     "carouselImages": ["/projects/task_tracker/task_page.png"],
     "projectUrl": "https://github.com/tutkowskim/TaskTracker",
     "productionUrl": "https://www.tasks.tutkowski.com",
-    "technologies": ["HTML", "CSS", "Javascript", "Angular", "Material UI", "Azure Functions", "Azure Cosmos DB", "Azure Static Web App", "Azure Functions"]
+    "technologies": ["HTML", "CSS", "Javascript", "React", "Material UI"]
   },
   {
     "name": "Kopps Flavor Forecast iOS",
