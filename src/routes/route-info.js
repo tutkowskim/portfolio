@@ -1,23 +1,27 @@
-import PlaceHolder from './PlaceHolder';
+import {
+  About, 
+  Connect,
+  Work,
+} from './components';
 
 export const routeInfo = [
   {
     name: 'Work',
     path: '/work',
     showInNavMenu: true,
-    component: PlaceHolder,
+    component: Work,
   },
   {
     name: 'About',
     path: '/about',
     showInNavMenu: true,
-    component: PlaceHolder,
+    component: About,
   },
   {
     name: 'Connect',
     path: '/connect',
     showInNavMenu: true,
-    component: PlaceHolder,
+    component: Connect,
   },
 ];
 
