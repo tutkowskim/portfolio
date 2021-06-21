@@ -21,11 +21,11 @@ function RouterOutlet() {
   return (
     <Container className={classes.routerOutlet} maxWidth="lg">
       <Switch>
-        { routeInfo.map((page) => (
+        { routeInfo.map((route) => (
           <Route
-            key={page.route}
-            path={page.route}
-            component={page.component}
+            key={route.path}
+            path={route.path}
+            component={route.component}
             exact
           />
         ))}
