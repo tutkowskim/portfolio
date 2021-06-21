@@ -1,17 +1,11 @@
 import React from 'react';
 
-import { CssBaseline, createMuiTheme, makeStyles, ThemeProvider } from '@material-ui/core';
-import blueGrey from '@material-ui/core/colors/blueGrey';
+import { CssBaseline, makeStyles, ThemeProvider } from '@material-ui/core';
 
+import theme from './theme';
 import NavBar from './NavBar';
 import RouterOutlet from './RouterOutlet';
 import Footer from './Footer'
-
-const theme = createMuiTheme({
-  palette: {
-    primary: blueGrey,
-  },
-});
 
 const useStyles = makeStyles(() => ({
   root: {
