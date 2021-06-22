@@ -5,8 +5,8 @@ import {
   Redirect,
 } from 'react-router-dom';
 
-import { Container , makeStyles } from '@material-ui/core';
-import { defaultRoute, routeInfo } from './routes'
+import { Container, makeStyles } from '@material-ui/core';
+import { defaultRoute, routeInfo } from './routes';
 
 const useStyles = makeStyles(() => ({
   routerOutlet: {
@@ -29,8 +29,8 @@ function RouterOutlet() {
             exact
           />
         ))}
-        
-        <Route exact path="/" render={() => <Redirect to={defaultRoute.path} />}/>
+
+        <Route exact path="/" render={() => <Redirect to={defaultRoute.path} />} />
         <Redirect from="*" to="/" />
       </Switch>
     </Container>

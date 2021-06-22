@@ -1,5 +1,5 @@
 import {
-  About, 
+  About,
   Connect,
   Work,
 } from './components';

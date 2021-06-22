@@ -5,7 +5,7 @@ import { CssBaseline, makeStyles, ThemeProvider } from '@material-ui/core';
 import theme from './theme';
 import NavBar from './NavBar';
 import RouterOutlet from './RouterOutlet';
-import Footer from './Footer'
+import Footer from './Footer';
 
 const useStyles = makeStyles(() => ({
   root: {

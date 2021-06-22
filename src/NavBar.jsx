@@ -1,9 +1,11 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 import {
   AppBar,
   Button,
+  Container,
   Drawer,
   Toolbar,
   IconButton,
@@ -22,6 +24,8 @@ import { routeInfo } from './routes';
 const useStyles = makeStyles((theme) => ({
   toolBar: {
     height: '64px',
+    paddingLeft: '0px',
+    paddingRight: '0px',
   },
   drawerList: {
     width: '250px',
@@ -34,8 +38,8 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function NavBar(props) {
-  const visibleRoutes = routeInfo.filter((routeInfo) => routeInfo.showInNavMenu);
+function NavBar({ width }) {
+  const visibleRoutes = routeInfo.filter((route) => route.showInNavMenu);
 
   const classes = useStyles();
   const history = useHistory();
@@ -48,31 +52,37 @@ function NavBar(props) {
 
   return (
     <AppBar position="static">
-      <Toolbar className={classes.toolBar}>
-        <Typography variant="h6" className={classes.title}>Mark Tutkowski</Typography>
-        {isWidthUp('sm', props.width) ? (
-          <>
-            { visibleRoutes.map((route) => <Button key={route.name} className={classes.menuButton} color="inherit" onClick={() => changePage(route.path)}>{route.name}</Button>) }
-          </>
-        ) : (
-          <>
-            <IconButton edge="start" color="inherit" aria-label="open drawer" onClick={() => setShowDrawer(!showDrawer)}>
-              <MenuIcon />
-            </IconButton>
-            <Drawer anchor="right" open={showDrawer} onClose={() => setShowDrawer(false)}>
-              <List className={classes.drawerList}>
-                { visibleRoutes.map((route) => (
-                  <ListItem button key={route.name} onClick={() => changePage(route.path)}>
-                    <ListItemText primary={route.name} />
-                  </ListItem>
-                ))}
-              </List>
-            </Drawer>
-          </>
-        )}
-      </Toolbar>
+      <Container maxWidth="lg">
+        <Toolbar className={classes.toolBar}>
+          <Typography variant="h6" className={classes.title}>Mark Tutkowski</Typography>
+          {isWidthUp('sm', width) ? (
+            <>
+              { visibleRoutes.map((route) => <Button key={route.name} className={classes.menuButton} color="inherit" onClick={() => changePage(route.path)}>{route.name}</Button>) }
+            </>
+          ) : (
+            <>
+              <IconButton edge="start" color="inherit" aria-label="open drawer" onClick={() => setShowDrawer(!showDrawer)}>
+                <MenuIcon />
+              </IconButton>
+              <Drawer anchor="right" open={showDrawer} onClose={() => setShowDrawer(false)}>
+                <List className={classes.drawerList}>
+                  { visibleRoutes.map((route) => (
+                    <ListItem button key={route.name} onClick={() => changePage(route.path)}>
+                      <ListItemText primary={route.name} />
+                    </ListItem>
+                  ))}
+                </List>
+              </Drawer>
+            </>
+          )}
+        </Toolbar>
+      </Container>
     </AppBar>
   );
 }
+
+NavBar.propTypes = {
+  width: PropTypes.number.isRequired,
+};
 
 export default withWidth()(NavBar);
