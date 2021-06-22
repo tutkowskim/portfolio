@@ -1,33 +1,39 @@
 import React from 'react';
 
-import Typography from '@material-ui/core/Typography';
-import { makeStyles } from '@material-ui/core/styles';
+import { Typography, makeStyles } from '@material-ui/core';
+
+import {
+  facebook,
+  github,
+  instagram,
+  linkedin,
+} from '../../social-media';
 
 const socialMediaLinks = [
   {
     name: 'Facebook',
     imgUrl: './social_media_logos/Facebook.png',
-    profileUrl: 'https://www.facebook.com/tutkowski.mark',
+    profileUrl: facebook,
   },
   {
     name: 'GitHub',
     imgUrl: './social_media_logos/GitHub.png',
-    profileUrl: 'https://github.com/tutkowskim',
+    profileUrl: github,
   },
   {
     name: 'Instagram',
     imgUrl: './social_media_logos/Instagram.png',
-    profileUrl: 'https://www.instagram.com/tutkowski',
+    profileUrl: instagram,
   },
   {
     name: 'LinkedIn',
     imgUrl: './social_media_logos/LinkedIn.png',
-    profileUrl: 'https://www.linkedin.com/in/marktutkowski',
+    profileUrl: linkedin,
   },
 ];
 
 const useStyles = makeStyles(() => ({
-  contactMe: {
+  connect: {
     height: '100%',
     display: 'flex',
     flexDirection: 'column',
@@ -50,10 +56,11 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
-function ContactMe() {
+function Connect() {
   const classes = useStyles();
   return (
-    <div className={classes.contactMe}>
+    <div className={classes.connect}>
+      <Typography variant="h5">Want to learn more?</Typography>
       <div className={classes.socialMediaList}>
         { socialMediaLinks.map((socialMediaLink) => (
           <a key={socialMediaLink.name} className={classes.socialMediaListItem} target="_blank" rel="noopener noreferrer" href={socialMediaLink.profileUrl}>
@@ -71,4 +78,4 @@ function ContactMe() {
   );
 }
 
-export default ContactMe;
+export default Connect;
