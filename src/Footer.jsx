@@ -37,10 +37,10 @@ function Footer() {
   return (
     <Container className={classes.footer}>
       <Typography className={classes.copyright} variant="body2">&copy; Mark Tutkowski 2021</Typography>
-      <a className={classes.socialMediaIcon} target="_blank" rel="noopener noreferrer" href={linkedin} aria-label="LinkedIn"><LinkedIn style={{ fontSize: 24 }} /></a>
       <a className={classes.socialMediaIcon} target="_blank" rel="noopener noreferrer" href={facebook} aria-label="Facebook"><Facebook style={{ fontSize: 24 }} /></a>
-      <a className={classes.socialMediaIcon} target="_blank" rel="noopener noreferrer" href={instagram} aria-label="Instagram"><Instagram style={{ fontSize: 24 }} /></a>
       <a className={classes.socialMediaIcon} target="_blank" rel="noopener noreferrer" href={github} aria-label="GitHub"><GitHub style={{ fontSize: 22 }} /></a>
+      <a className={classes.socialMediaIcon} target="_blank" rel="noopener noreferrer" href={instagram} aria-label="Instagram"><Instagram style={{ fontSize: 24 }} /></a>
+      <a className={classes.socialMediaIcon} target="_blank" rel="noopener noreferrer" href={linkedin} aria-label="LinkedIn"><LinkedIn style={{ fontSize: 24 }} /></a>
     </Container>
   );
 }

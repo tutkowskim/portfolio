@@ -29,7 +29,6 @@ function RouterOutlet() {
             exact
           />
         ))}
-
         <Route exact path="/" render={() => <Redirect to={defaultRoute.path} />} />
         <Redirect from="*" to="/" />
       </Switch>
