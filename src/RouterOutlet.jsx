@@ -6,6 +6,7 @@ import {
 } from 'react-router-dom';
 
 import { Container, makeStyles } from '@material-ui/core';
+import GoogleAnalytics from './GoogleAnalytics';
 import { defaultRoute, routeInfo } from './routes';
 
 const useStyles = makeStyles(() => ({
@@ -32,6 +33,7 @@ function RouterOutlet() {
         <Route exact path="/" render={() => <Redirect to={defaultRoute.path} />} />
         <Redirect from="*" to="/" />
       </Switch>
+      <GoogleAnalytics />
     </Container>
   );
 }
