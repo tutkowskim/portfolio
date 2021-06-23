@@ -17,8 +17,8 @@ const useStyles = makeStyles(() => ({
   footer: {
     display: 'flex',
     flexDirection: 'row',
-    paddingTop: '10px',
-    paddingBottom: '10px',
+    paddingTop: '2rem',
+    paddingBottom: '1rem',
   },
   copyright: {
     flexGrow: 1,
