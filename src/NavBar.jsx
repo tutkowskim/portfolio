@@ -23,12 +23,12 @@ import { routeInfo } from './routes';
 
 const useStyles = makeStyles((theme) => ({
   toolBar: {
-    height: '64px',
-    paddingLeft: '0px',
-    paddingRight: '0px',
+    height: '4rem',
+    paddingLeft: '0rem',
+    paddingRight: '0rem',
   },
   drawerList: {
-    width: '250px',
+    width: '15rem',
   },
   menuButton: {
     marginRight: theme.spacing(2),
