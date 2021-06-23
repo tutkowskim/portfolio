@@ -4,6 +4,8 @@ import {
   Work,
 } from './components';
 
+import { projectInfo } from './project-info';
+
 export const routeInfo = [
   {
     name: 'Work',
@@ -23,6 +25,7 @@ export const routeInfo = [
     showInNavMenu: true,
     component: Connect,
   },
+  ...projectInfo,
 ];
 
 export const defaultRoute = routeInfo[0];
