@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import { Typography, makeStyles } from '@material-ui/core';
+import { Paper, Typography, makeStyles } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
   projectCell: {
@@ -42,7 +42,7 @@ function ProjectCell({ name, imageSrc, path }) {
   };
 
   return (
-    <div
+    <Paper
       role="button"
       tabIndex={0}
       className={classes.projectCell}
@@ -57,7 +57,7 @@ function ProjectCell({ name, imageSrc, path }) {
         <Typography className={classes.projectName} variant="h5">{name}</Typography>
       </div>
       )}
-    </div>
+    </Paper>
   );
 }
 
