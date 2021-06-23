@@ -82,7 +82,7 @@ function NavBar({ width }) {
 }
 
 NavBar.propTypes = {
-  width: PropTypes.number.isRequired,
+  width: PropTypes.string.isRequired,
 };
 
 export default withWidth()(NavBar);

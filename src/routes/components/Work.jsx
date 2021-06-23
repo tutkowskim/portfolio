@@ -1,7 +1,10 @@
 import React from 'react';
 import { Typography, makeStyles } from '@material-ui/core';
+import ProjectCell from './ProjectCell';
 
-const personalBrandStatement = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aliquam odio mi, scelerisque gravida tellus elementum ac. Nam quis dictum augue.'
+import { projectInfo } from '../project-info';
+
+const personalBrandStatement = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aliquam odio mi, scelerisque gravida tellus elementum ac. Nam quis dictum augue.';
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -16,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
     marginTop: '2rem',
     marginBottom: '2rem',
     marginLeft: 'auto',
-    marginRight: 'auto'
+    marginRight: 'auto',
   },
   projectGrid: {
     display: 'grid',
@@ -34,12 +37,6 @@ const useStyles = makeStyles((theme) => ({
       gridTemplateRows: 'repeat(9, 300px)',
     },
   },
-  projectCell: {
-    width: '100%',
-    height: '100%',
-    background: 'black',
-    padding: '1rem',
-  }
 }));
 
 function Work() {
@@ -48,18 +45,17 @@ function Work() {
     <div className={classes.container}>
       <Typography className={classes.personalBrandStatement} variant="h5">{personalBrandStatement}</Typography>
       <div className={classes.projectGrid}>
-        <div className={classes.projectCell} ></div>
-        <div className={classes.projectCell} ></div>
-        <div className={classes.projectCell} ></div>
-        <div className={classes.projectCell} ></div>
-        <div className={classes.projectCell} ></div>
-        <div className={classes.projectCell} ></div>
-        <div className={classes.projectCell} ></div>
-        <div className={classes.projectCell} ></div>
-        <div className={classes.projectCell} ></div>
+        {projectInfo.map((project) => (
+          <ProjectCell
+            key={project.path}
+            name={project.name}
+            path={project.path}
+            imageSrc={project.imageSrc}
+          />
+        ))}
       </div>
     </div>
-  )
-};
+  );
+}
 
 export default Work;
