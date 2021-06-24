@@ -8,6 +8,7 @@ const useStyles = makeStyles((theme) => ({
     position: 'relative',
     width: '100%',
     height: '100%',
+    cursor: 'pointer',
   },
   overlay: {
     position: 'absolute',
