@@ -53,7 +53,7 @@ const useStyles = makeStyles(() => ({
     paddingRight: '0.25rem',
   },
   socialMediaIcon: {
-    height: '5rem',
+    height: '4.75rem',
   },
 }));
 
