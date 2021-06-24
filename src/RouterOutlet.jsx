@@ -11,7 +11,6 @@ import { defaultRoute, routeInfo } from './routes';
 
 const useStyles = makeStyles(() => ({
   routerOutlet: {
-    flexBasis: 'calc(100% - 64px)',
     flexGrow: 1,
     flexShrink: 1,
   },

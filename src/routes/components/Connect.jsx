@@ -45,14 +45,15 @@ const useStyles = makeStyles(() => ({
     flexDirection: 'row',
     justifyContent: 'center',
     flexWrap: 'wrap',
+    paddingTop: '1rem',
+    paddingBottom: '0.5rem',
   },
   socialMediaListItem: {
-    paddingTop: '5px',
-    paddingLeft: '5px',
-    paddingRight: '5px',
+    paddingLeft: '0.25rem',
+    paddingRight: '0.25rem',
   },
   socialMediaIcon: {
-    height: '72px',
+    height: '4.75rem',
   },
 }));
 

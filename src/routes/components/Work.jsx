@@ -26,15 +26,15 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
     justifyContent: 'center',
     gridGap: '1rem',
-    gridTemplateColumns: 'repeat(3, minmax(300px, 300px))',
-    gridTemplateRows: 'repeat(3, minmax(300px, 300px))',
+    gridTemplateColumns: 'repeat(3, 18rem)',
+    gridTemplateRows: 'repeat(3, 18rem)',
     [theme.breakpoints.down('sm')]: {
-      gridTemplateColumns: 'repeat(2, 300px)',
-      gridTemplateRows: 'repeat(5, 300px)',
+      gridTemplateColumns: 'repeat(2, 18rem)',
+      gridTemplateRows: 'repeat(5, 18rem)',
     },
     [theme.breakpoints.down('xs')]: {
-      gridTemplateColumns: 'repeat(1, 300px)',
-      gridTemplateRows: 'repeat(9, 300px)',
+      gridTemplateColumns: 'repeat(1, 18rem)',
+      gridTemplateRows: 'repeat(9, 18rem)',
     },
   },
 }));
