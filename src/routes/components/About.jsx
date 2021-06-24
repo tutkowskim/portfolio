@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
   aboutMe: {
     display: 'flex',
     flexDirection: 'row',
-    paddingTop: '1rem',
+    paddingTop: '2rem',
     [theme.breakpoints.down('sm')]: {
       flexDirection: 'column',
     },
@@ -27,10 +27,10 @@ const useStyles = makeStyles((theme) => ({
     height: '288px',
   },
   aboutMeContent: {
-    paddingLeft: '1rem',
+    paddingLeft: '2rem',
     [theme.breakpoints.down('sm')]: {
       paddingLeft: '0rem',
-      paddingTop: '1rem',
+      paddingTop: '2rem',
     },
   },
   viewResumeButton: {
