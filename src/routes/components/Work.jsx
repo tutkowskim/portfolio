@@ -4,7 +4,7 @@ import ProjectCell from './ProjectCell';
 
 import { projectInfo } from '../project-info';
 
-const personalBrandStatement = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aliquam odio mi, scelerisque gravida tellus elementum ac. Nam quis dictum augue.';
+const personalBrandStatement = 'Exploring new technologies and methodologies to create a better tomorrow. 🤔';
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -43,7 +43,9 @@ function Work() {
   const classes = useStyles();
   return (
     <div className={classes.container}>
-      <Typography className={classes.personalBrandStatement} variant="h5">{personalBrandStatement}</Typography>
+      <Typography className={classes.personalBrandStatement} variant="h4">
+        {personalBrandStatement}
+      </Typography>
       <div className={classes.projectGrid}>
         {projectInfo.map((project) => (
           <ProjectCell
