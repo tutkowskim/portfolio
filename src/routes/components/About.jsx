@@ -1,7 +1,14 @@
 import React from 'react';
 import { Button, Typography, makeStyles } from '@material-ui/core';
 
-const placeHolderTest = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.';
+const placeHolderTest = 'I first got started in software during high school'
+  + ' when I joined our FIRST Robotics team where we created robots to complete in various games'
+  + ' announced each year (one of which was a modification of soccer). This lead me to get my degree in Computer'
+  + ' Engineering from MSOE and eventually join the workforce as a Software Engineer. Over the'
+  + " course of my professional career and personal projects I've had the opportunity to work on"
+  + ' projects across multiple domains which include embedded, desktop, mobile, and web applications.'
+  + ' While working on these projects I was always interested in improving the user experience'
+  + ' which lead me to get my certificate in UX Design.';
 
 const useStyles = makeStyles((theme) => ({
   container: {

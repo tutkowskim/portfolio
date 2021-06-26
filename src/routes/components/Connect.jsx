@@ -61,7 +61,7 @@ function Connect() {
   const classes = useStyles();
   return (
     <div className={classes.connect}>
-      <Typography variant="h5">Want to learn more?</Typography>
+      <Typography variant="h4">Want to learn more?</Typography>
       <div className={classes.socialMediaList}>
         { socialMediaLinks.map((socialMediaLink) => (
           <a key={socialMediaLink.name} className={classes.socialMediaListItem} target="_blank" rel="noopener noreferrer" href={socialMediaLink.profileUrl}>

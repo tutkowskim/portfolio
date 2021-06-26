@@ -1,10 +1,13 @@
 import React from 'react';
-import { Typography, makeStyles } from '@material-ui/core';
+import { useHistory } from 'react-router-dom';
+import { Typography, Link, makeStyles } from '@material-ui/core';
 import ProjectCell from './ProjectCell';
 
 import { projectInfo } from '../project-info';
+import { connect } from '../route-paths';
 
-const personalBrandStatement = 'Exploring new technologies and methodologies to create a better tomorrow. 🤔';
+/* eslint-disable max-len */
+/* eslint-disable jsx-a11y/anchor-is-valid */
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -12,14 +15,14 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'column',
     height: '100%',
     width: '100%',
-  },
-  personalBrandStatement: {
-    textAlign: 'center',
-    maxWidth: '50rem',
-    marginTop: '2rem',
-    marginBottom: '2rem',
+    maxWidth: '56rem',
     marginLeft: 'auto',
     marginRight: 'auto',
+    marginTop: '2rem',
+    gap: '2rem',
+  },
+  greeting: {
+    opacity: 0.5,
   },
   projectGrid: {
     display: 'grid',
@@ -41,10 +44,17 @@ const useStyles = makeStyles((theme) => ({
 
 function Work() {
   const classes = useStyles();
+  const history = useHistory();
   return (
     <div className={classes.container}>
-      <Typography className={classes.personalBrandStatement} variant="h4">
-        {personalBrandStatement}
+      <Typography className={classes.greeting} variant="h4">Hi there!</Typography>
+      <Typography variant="h5">
+        I&apos;m Mark, a Software Engineer with projects spanning across embedded, desktop, mobile, and web platforms.
+        {' '}
+        Check out some of my project below or feel free to
+        {' '}
+        <Link color="secondary" onClick={() => history.push(connect)}>connect</Link>
+        !
       </Typography>
       <div className={classes.projectGrid}>
         {projectInfo.map((project) => (

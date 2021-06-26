@@ -4,24 +4,26 @@ import {
   Work,
 } from './components';
 
+import { about, connect, work } from './route-paths';
+
 import { projectInfo } from './project-info';
 
 export const routeInfo = [
   {
     name: 'Work',
-    path: '/work',
+    path: work,
     showInNavMenu: true,
     component: Work,
   },
   {
     name: 'About',
-    path: '/about',
+    path: about,
     showInNavMenu: true,
     component: About,
   },
   {
     name: 'Connect',
-    path: '/connect',
+    path: connect,
     showInNavMenu: true,
     component: Connect,
   },

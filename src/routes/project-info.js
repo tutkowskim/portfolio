@@ -1,9 +1,10 @@
 import PlaceHolder from './components/PlaceHolder';
+import { getProjectRoute } from './route-paths';
 
 export class ProjectInfo {
   constructor(name, imageSrc, component) {
     this.name = name;
-    this.path = `/work/${name}`;
+    this.path = getProjectRoute(name);
     this.imageSrc = imageSrc;
     this.component = component;
   }
