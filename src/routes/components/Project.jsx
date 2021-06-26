@@ -1,5 +1,7 @@
 import React from 'react';
+import { useParams } from "react-router-dom";
 import { Typography, makeStyles } from '@material-ui/core';
+import useProjectMarkdown from './useProjectMarkdown';
 
 const useStyles = makeStyles(() => ({
   container: {
@@ -14,14 +16,11 @@ const useStyles = makeStyles(() => ({
 
 function Connect() {
   const classes = useStyles();
+  const { projectName } = useParams();
+  const markdown = useProjectMarkdown(projectName)
   return (
     <div className={classes.container}>
-      <Typography variant="h4">Project is under construction</Typography>
-      <Typography>
-        Thank you for your interest in this project.
-        {' '}
-        I&apos;m busying creating content for this site, so please check again later.
-      </Typography>
+      <Typography>{markdown}</Typography>
     </div>
   );
 }

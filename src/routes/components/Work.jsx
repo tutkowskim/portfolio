@@ -1,10 +1,10 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 import { Typography, Link, makeStyles } from '@material-ui/core';
-import ProjectCell from './ProjectCell';
 
-import { projectInfo } from '../project-info';
-import { connect } from '../route-paths';
+import { connect, getProjectRoute } from '../route-paths';
+import ProjectCell from './ProjectCell';
+import useProjectData from './useProjectData';
 
 /* eslint-disable max-len */
 /* eslint-disable jsx-a11y/anchor-is-valid */
@@ -20,6 +20,9 @@ const useStyles = makeStyles((theme) => ({
     marginRight: 'auto',
     marginTop: '2rem',
     gap: '2rem',
+    [theme.breakpoints.down('sm')]: {
+      maxWidth: '36rem',
+    },
   },
   greeting: {
     opacity: 0.5,
@@ -45,6 +48,8 @@ const useStyles = makeStyles((theme) => ({
 function Work() {
   const classes = useStyles();
   const history = useHistory();
+  const projectData = useProjectData();
+
   return (
     <div className={classes.container}>
       <Typography className={classes.greeting} variant="h4">Hi there!</Typography>
@@ -57,12 +62,12 @@ function Work() {
         !
       </Typography>
       <div className={classes.projectGrid}>
-        {projectInfo.map((project) => (
+        {projectData.map((project) => (
           <ProjectCell
-            key={project.path}
+            key={project.name}
             name={project.name}
-            path={project.path}
-            imageSrc={project.imageSrc}
+            path={getProjectRoute(project.name)}
+            imageSrc={project.coverImageUrl}
           />
         ))}
       </div>

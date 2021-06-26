@@ -2,11 +2,12 @@ import {
   About,
   Connect,
   Work,
+  Project,
 } from './components';
 
-import { about, connect, work } from './route-paths';
-
-import { projectInfo } from './project-info';
+import {
+  about, connect, work, project,
+} from './route-paths';
 
 export const routeInfo = [
   {
@@ -27,7 +28,10 @@ export const routeInfo = [
     showInNavMenu: true,
     component: Connect,
   },
-  ...projectInfo,
+  {
+    path: project,
+    component: Project,
+  },
 ];
 
 export const defaultRoute = routeInfo[0];
