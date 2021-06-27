@@ -7,7 +7,6 @@ export default function useProjectMarkdown(projectName) {
 
   useEffect(() => {
     const fetchData = async (markdownUrl) => {
-      console.log(markdownUrl)
       const res = await fetch(markdownUrl);
       const text = await res.text();
       setMarkdown(text);
