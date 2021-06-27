@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
     left: '50%',
     transform: 'translate(-50%, -50%)',
     color: theme.palette.primary.contrastText,
-    textAlign: 'center'
+    textAlign: 'center',
   },
 }));
 
