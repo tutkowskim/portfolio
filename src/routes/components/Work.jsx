@@ -9,7 +9,7 @@ import useProjectData from './useProjectData';
 /* eslint-disable max-len */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = (projectCount) => makeStyles((theme) => ({
   container: {
     display: 'flex',
     flexDirection: 'column',
@@ -33,22 +33,22 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'center',
     gridGap: '1rem',
     gridTemplateColumns: 'repeat(3, 18rem)',
-    gridTemplateRows: 'repeat(3, 18rem)',
+    gridTemplateRows: `repeat(${Math.ceil(projectCount / 3)}, 18rem)`,
     [theme.breakpoints.down('sm')]: {
       gridTemplateColumns: 'repeat(2, 18rem)',
-      gridTemplateRows: 'repeat(5, 18rem)',
+      gridTemplateRows: `repeat(${Math.ceil(projectCount / 2)}, 18rem)`,
     },
     [theme.breakpoints.down('xs')]: {
       gridTemplateColumns: 'repeat(1, 18rem)',
-      gridTemplateRows: 'repeat(9, 18rem)',
+      gridTemplateRows: `repeat(${projectCount}, 18rem)`,
     },
   },
-}));
+}))();
 
 function Work() {
-  const classes = useStyles();
   const history = useHistory();
   const projectData = useProjectData();
+  const classes = useStyles(projectData.length);
 
   return (
     <div className={classes.container}>
