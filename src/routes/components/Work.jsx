@@ -56,7 +56,7 @@ function Work() {
       <Typography variant="h5">
         I&apos;m Mark, a Software Engineer with projects spanning across embedded, desktop, mobile, and web platforms.
         {' '}
-        Check out some of my project below or feel free to
+        Check out some of my projects below or feel free to
         {' '}
         <Link color="secondary" onClick={() => history.push(connect)}>connect</Link>
         !

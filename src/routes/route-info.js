@@ -6,7 +6,10 @@ import {
 } from './components';
 
 import {
-  about, connect, work, project,
+  about,
+  connect,
+  work,
+  project,
 } from './route-paths';
 
 export const routeInfo = [

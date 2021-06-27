@@ -1,6 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
+import rehypeRaw from 'rehype-raw'
 import { Typography, Link, makeStyles } from '@material-ui/core';
 import useProjectMarkdown from './useProjectMarkdown';
 
@@ -37,7 +38,7 @@ function Project() {
   };
 
   return (
-    <ReactMarkdown className={classes.markdown} components={components}>{markdown}</ReactMarkdown>
+    <ReactMarkdown className={classes.markdown} rehypePlugins={[rehypeRaw]}  components={components}>{markdown}</ReactMarkdown>
   );
 }
 

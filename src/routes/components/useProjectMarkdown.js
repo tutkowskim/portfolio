@@ -13,12 +13,12 @@ export default function useProjectMarkdown(projectName) {
       setMarkdown(text);
     }
 
-    const project = projectData.find(p => p.name === projectName)
+    const project = projectData?.find(p => p.name === projectName)
     const markdownUrl = project?.markdownUrl
     if (markdownUrl) {
       fetchData(markdownUrl);
     }
-  }, [projectData]);
+  }, [projectName, projectData]);
 
   return markdown;
 }
