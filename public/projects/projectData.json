@@ -1,4 +1,8 @@
 [
   { "name": "Portfolio", "coverImageUrl": "/projects/portfolio/portfolio-cover.svg", "markdownUrl": "/projects/portfolio/portfolio.md" },
-  { "name": "Resume", "coverImageUrl": "/projects/resume/resume-cover.svg", "markdownUrl": "/projects/resume/resume.md" }
+  { "name": "Resume", "coverImageUrl": "/projects/resume/resume-cover.svg", "markdownUrl": "/projects/resume/resume.md" },
+  { "name": "Cowsay", "coverImageUrl": "/projects/cowsay/cowsay-cover.svg", "markdownUrl": "/projects/cowsay/cowsay.md" },
+  { "name": "Kopps Flavor Forecast", "coverImageUrl": "/projects/kopps-flavor-forecast/kopps-flavor-forecast-cover.svg", "markdownUrl": "/projects/kopps-flavor-forecast/kopps-flavor-forecast.md" },
+  { "name": "Scrum Poker", "coverImageUrl": "/projects/scrum-poker/scrum-poker-cover.svg", "markdownUrl": "/projects/scrum-poker/scrum-poker.md" },
+  { "name": "Oscilloscope", "coverImageUrl": "/projects/oscilloscope/oscilloscope-cover.svg", "markdownUrl": "/projects/oscilloscope/oscilloscope.md" }
 ]
