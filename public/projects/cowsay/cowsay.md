@@ -5,7 +5,7 @@ A port for the fun linux cowsay application to Android, which allows the user to
 
 <br><br>
 <div style="display: flex; justify-content: center;">
-    <img src="/projects/cowsay/cowsay_view.png" style="width: 100%; max-width: 800px;" />
+  <img src="/projects/cowsay/cowsay_view.png" style="width: 100%; max-width: 800px;" />
 </div>
 <br><br>
 
