@@ -2,7 +2,9 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import rehypeRaw from 'rehype-raw';
-import { Typography, Link, makeStyles } from '@material-ui/core';
+import {
+  CircularProgress, Typography, Link, makeStyles,
+} from '@material-ui/core';
 import useProjectMarkdown from './useProjectMarkdown';
 
 /* eslint-disable react/display-name */
@@ -10,6 +12,18 @@ import useProjectMarkdown from './useProjectMarkdown';
 /* eslint-disable react/jsx-props-no-spreading */
 
 const useStyles = makeStyles(() => ({
+  centerVertical: {
+    height: '100%',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+  },
+  centerHorizontal: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'center',
+    flexWrap: 'wrap',
+  },
   markdown: {
     height: '100%',
     display: 'flex',
@@ -21,7 +35,7 @@ const useStyles = makeStyles(() => ({
 function Project() {
   const classes = useStyles();
   const { projectName } = useParams();
-  const markdown = useProjectMarkdown(projectName);
+  const [loading, notFound, markdown] = useProjectMarkdown(projectName);
 
   // Map the markdown components to material-ui components
   // https://github.com/remarkjs/react-markdown#appendix-b-components
@@ -36,6 +50,25 @@ function Project() {
     em: ({ node, children, ...props }) => <Typography variant="body1" {...props}>{children}</Typography>,
     a: ({ node, children, ...props }) => <Link {...props}>{children}</Link>,
   };
+
+  if (loading || notFound) {
+    return (
+      <div className={classes.centerVertical}>
+        <div className={classes.centerHorizontal}>
+          {loading && <CircularProgress /> }
+          {notFound && (
+            <Typography variant="h4">
+              <span role="img" aria-label="error">🚨</span>
+              {' '}
+              Project not found
+              {' '}
+              <span role="img" aria-label="error">🚨</span>
+            </Typography>
+          )}
+        </div>
+      </div>
+    );
+  }
 
   return (
     <ReactMarkdown
