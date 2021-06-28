@@ -47,7 +47,7 @@ const useStyles = (projectCount) => makeStyles((theme) => ({
 
 function Work() {
   const history = useHistory();
-  const projectData = useProjectData();
+  const { projectData } = useProjectData();
   const classes = useStyles(projectData.length);
 
   return (

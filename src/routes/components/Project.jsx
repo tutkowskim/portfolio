@@ -35,7 +35,7 @@ const useStyles = makeStyles(() => ({
 function Project() {
   const classes = useStyles();
   const { projectName } = useParams();
-  const [loading, notFound, markdown] = useProjectMarkdown(projectName);
+  const { loading, notFound, markdown } = useProjectMarkdown(projectName);
 
   // Map the markdown components to material-ui components
   // https://github.com/remarkjs/react-markdown#appendix-b-components

@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import useProjectData from './useProjectData';
 
 export default function useProjectMarkdown(projectName) {
-  const projectData = useProjectData();
+  const { projectData, loading: loadingProjectData } = useProjectData();
   const [markdown, setMarkdown] = useState(undefined);
   const [loading, setLoading] = useState(true);
   const [notFound, setNotFound] = useState(false);
@@ -15,6 +15,12 @@ export default function useProjectMarkdown(projectName) {
       setLoading(false);
     }
 
+    if (loadingProjectData) {
+      setNotFound(false);
+      setLoading(true);
+      return;
+    }
+  
     const project = projectData?.find(p => p.name === projectName)
     const markdownUrl = project?.markdownUrl
     if (markdownUrl) {
@@ -26,7 +32,7 @@ export default function useProjectMarkdown(projectName) {
       setLoading(false);
       setMarkdown(undefined);
     }
-  }, [projectName, projectData]);
+  }, [loadingProjectData, projectName, projectData]);
 
-  return [loading, notFound, markdown];
+  return { loading, notFound, markdown };
 }
