@@ -5,7 +5,7 @@ For my senior design project at Milwaukee School of Engineering I worked with fo
 <div style="display: flex; justify-content: center;">
   <figure>
     <img src="/projects/oscilloscope/prototype.png" style="width: 100%; max-width: 400px;" />
-    <figcaption style="text-align: center;">Prototype</figcaption>
+    <figcaption class="MuiTypography-root MuiTypography-caption" style="text-align: center;">Prototype</figcaption>
   </figure>
 </div>
 <br><br>
@@ -20,7 +20,7 @@ Finally an adjustable voltage scale factor is provided by the op-amp circuit nea
 <div style="display: flex; justify-content: center;">
   <figure>
     <img src="/projects/oscilloscope/input-signal-circuit.png" style="width: 100%; max-width: 400px;" />
-    <figcaption style="text-align: center;">Input Circuit</figcaption>
+    <figcaption class="MuiTypography-root MuiTypography-caption" style="text-align: center;">Input Circuit</figcaption>
   </figure>
 </div>
 <br><br>
@@ -34,11 +34,11 @@ After modulation the one bit digital signal is fed into a 256 tap 8 bit hamming 
 <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 1rem;">
   <figure>
     <img src="/projects/oscilloscope/delta-sigma-modulation.png" style="width: 100%; max-width: 400px; max-height:200px;" />
-    <figcaption style="text-align: center;">Delta Sigma Modulation Waveforms</figcaption>
+    <figcaption class="MuiTypography-root MuiTypography-caption" style="text-align: center;">Delta Sigma Modulation Waveforms</figcaption>
   </figure>
   <figure>
     <img src="/projects/oscilloscope/delta-sigma-modulation-logic.png" style="width: 100%; max-width: 400px; max-height:200px;" />
-    <figcaption style="text-align: center;">Delta Sigma Modulation Circuit</figcaption>
+    <figcaption class="MuiTypography-root MuiTypography-caption" style="text-align: center;">Delta Sigma Modulation Circuit</figcaption>
   </figure>
 </div>
 <br><br>
@@ -49,7 +49,7 @@ The trigger circuit causes the oscilloscope to start collecting values from the 
 <div style="display: flex; justify-content: center;">
   <figure>
     <img src="/projects/oscilloscope/analog-trigger-circuit.png" style="width: 100%; max-width: 400px;" />
-    <figcaption style="text-align: center;">Trigger Circuit</figcaption>
+    <figcaption class="MuiTypography-root MuiTypography-caption" style="text-align: center;">Trigger Circuit</figcaption>
   </figure>
 </div>
 <br><br>
@@ -60,11 +60,11 @@ Once the waveform is collected it is held in a buffer until the USB controller f
 <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 1rem;">
   <figure>
     <img src="/projects/oscilloscope/example-input.png" style="width: 100%; max-width: 400px;" />
-    <figcaption style="text-align: center;">Sample Input</figcaption>
+    <figcaption class="MuiTypography-root MuiTypography-caption" style="text-align: center;">Sample Input</figcaption>
   </figure>
   <figure>
     <img src="/projects/oscilloscope/example-output.png" style="width: 100%; max-width: 400px;" />
-    <figcaption style="text-align: center;">Rendered Output</figcaption>
+    <figcaption class="MuiTypography-root MuiTypography-caption" style="text-align: center;">Rendered Output</figcaption>
   </figure>
 </div>
 <br><br>
