@@ -5,7 +5,7 @@ export default function useProjectMarkdown(projectName) {
   const projectData = useProjectData();
   const [markdown, setMarkdown] = useState(undefined);
   const [loading, setLoading] = useState(true);
-  const [notFound, setNotFound] = useState(true);
+  const [notFound, setNotFound] = useState(false);
 
   useEffect(() => {
     const fetchData = async (markdownUrl) => {
