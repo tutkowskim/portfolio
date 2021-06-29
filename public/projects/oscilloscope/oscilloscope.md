@@ -1,4 +1,4 @@
-#### Oscilloscope
+#### Pocket Oscilloscope
 For my senior design project at Milwaukee School of Engineering I worked with four other talented engineering students to build a pocket oscilloscope. The oscilloscope was designed to acquire the signal using a custom analog to digital converter, a trigger circuit to start the collection, a memory buffer to hold the waveform, and lastly a PC application to display the waveform.
 
 <br><br>
@@ -33,12 +33,12 @@ After modulation the one bit digital signal is fed into a 256 tap 8 bit hamming 
 <br><br>
 <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 1rem;">
   <figure>
-    <img src="/projects/oscilloscope/delta-sigma-modulation.png" style="width: 100%; max-width: 400px; max-height:200px;" />
-    <figcaption class="MuiTypography-root MuiTypography-caption" style="text-align: center;">Delta Sigma Modulation Waveforms</figcaption>
-  </figure>
-  <figure>
     <img src="/projects/oscilloscope/delta-sigma-modulation-logic.png" style="width: 100%; max-width: 400px; max-height:200px;" />
     <figcaption class="MuiTypography-root MuiTypography-caption" style="text-align: center;">Delta Sigma Modulation Circuit</figcaption>
+  </figure>
+  <figure>
+    <img src="/projects/oscilloscope/delta-sigma-modulation.png" style="width: 100%; max-width: 400px; max-height:200px;" />
+    <figcaption class="MuiTypography-root MuiTypography-caption" style="text-align: center;">Delta Sigma Modulation Waveforms</figcaption>
   </figure>
 </div>
 <br><br>
