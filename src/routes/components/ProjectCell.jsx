@@ -12,12 +12,16 @@ const useStyles = makeStyles((theme) => ({
   },
   overlay: {
     position: 'absolute',
-    backgroundColor: theme.palette.primary.main,
-    opacity: 0.7,
     top: 0,
     left: 0,
     right: 0,
     bottom: 0,
+  },
+  background: {
+    width: '100%',
+    height: '100%',
+    backgroundColor: theme.palette.primary.main,
+    opacity: 0.7,
   },
   projectName: {
     margin: 0,
@@ -56,6 +60,7 @@ function ProjectCell({ name, imageSrc, path }) {
       <img width="100%" height="100%" src={imageSrc} alt={name} />
       {showOverlay && (
       <div className={classes.overlay}>
+        <div className={classes.background} />
         <Typography className={classes.projectName} variant="h5">{name}</Typography>
       </div>
       )}
