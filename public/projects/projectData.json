@@ -1,4 +1,5 @@
 [
+  { "name": "Task Tracker", "coverImageUrl": "/projects/task-tracker/task-tracker-cover.png", "markdownUrl": "/projects/task-tracker/task-tracker.md" },
   { "name": "Portfolio", "coverImageUrl": "/projects/portfolio/portfolio-cover.png", "markdownUrl": "/projects/portfolio/portfolio.md" },
   { "name": "Resume", "coverImageUrl": "/projects/resume/resume-cover.png", "markdownUrl": "/projects/resume/resume.md" },
   { "name": "Kopps Flavor Forecast", "coverImageUrl": "/projects/kopps-flavor-forecast/kopps-flavor-forecast-cover.png", "markdownUrl": "/projects/kopps-flavor-forecast/kopps-flavor-forecast.md" },
