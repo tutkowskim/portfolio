@@ -5,22 +5,22 @@
   "dependencies": {
     "@material-ui/core": "^4.11.0",
     "@material-ui/icons": "^4.9.1",
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
-    "prop-types": "^15.7.2",
+    "@testing-library/jest-dom": "4.2.4",
+    "@testing-library/react": "9.5.0",
+    "@testing-library/user-event": "7.2.1",
+    "prop-types": "15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-markdown": "^6.0.2",
-    "react-responsive-carousel": "^3.2.10",
+    "react-markdown": "6.0.2",
+    "react-responsive-carousel": "3.2.10",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3",
-    "rehype-raw": "^5.1.0"
+    "rehype-raw": "5.1.0"
   },
   "devDependencies": {
-    "eslint": "^6.6.0",
-    "eslint-config-airbnb": "^18.2.0",
-    "eslint-plugin-jsx-a11y": "^6.4.1"
+    "eslint": "6.8.0",
+    "eslint-config-airbnb": "18.2.0",
+    "eslint-plugin-jsx-a11y": "6.4.1"
   },
   "scripts": {
     "start": "react-scripts start",
