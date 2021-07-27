@@ -13,16 +13,16 @@ export default function useProjectMarkdown(projectName) {
       const text = await res.text();
       setMarkdown(text);
       setLoading(false);
-    }
+    };
 
     if (loadingProjectData) {
       setNotFound(false);
       setLoading(true);
       return;
     }
-  
-    const project = projectData?.find(p => p.name === projectName)
-    const markdownUrl = project?.markdownUrl
+
+    const project = projectData?.find((p) => p.name === projectName);
+    const markdownUrl = project?.markdownUrl;
     if (markdownUrl) {
       setNotFound(false);
       setLoading(true);

@@ -10,7 +10,7 @@ export default function useProjectData() {
       const json = await res.json();
       setProjectData(json);
       setLoading(false);
-    }
+    };
     fetchData();
   }, []);
 
