@@ -7,8 +7,8 @@ const placeHolderTest = 'I first got started in software during high school'
   + ' Engineering from MSOE and eventually join the workforce as a Software Engineer. Over the'
   + " course of my professional career and personal projects I've had the opportunity to work on"
   + ' projects across multiple domains which include embedded, desktop, mobile, and web applications.'
-  + ' While working on these projects I was always interested in improving the user experience'
-  + ' which lead me to get my certificate in UX Design.';
+  + ' While working on these projects I was always interested in continuously learning to improve myself and the product'
+  + ' which lead me to go back to school for a masters in computer science.';
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -46,9 +46,9 @@ const useStyles = makeStyles((theme) => ({
   credentials: {
     display: 'flex',
     flexDirection: 'row',
-    justifyContent: 'space-between',
+    justifyContent: 'center',
     paddingTop: '3rem',
-    gap: '1rem',
+    gap: '5rem',
     [theme.breakpoints.down('sm')]: {
       flexDirection: 'column',
     },
@@ -75,14 +75,6 @@ function About() {
       </div>
       <div className={classes.credentials}>
         <div className={classes.credentialBox}>
-          <Typography variant="h5">Education</Typography>
-          <div className={classes.credential}>
-            <Typography variant="body1">Bachelor&apos;s of Science in Computer Engineering</Typography>
-            <Typography variant="body2">Milwaukee School of Engineering</Typography>
-            <Typography variant="caption">2011-2015</Typography>
-          </div>
-        </div>
-        <div className={classes.credentialBox}>
           <Typography variant="h5">Work Experience</Typography>
           <div className={classes.credential}>
             <Typography variant="body1">Software Engineer</Typography>
@@ -93,6 +85,19 @@ function About() {
             <Typography variant="body1">Software Engineer</Typography>
             <Typography variant="body2">Rockwell Automation</Typography>
             <Typography variant="caption">May 2012 - Apr 2021</Typography>
+          </div>
+        </div>
+        <div className={classes.credentialBox}>
+          <Typography variant="h5">Education</Typography>
+          <div className={classes.credential}>
+            <Typography variant="body1">Master of Computer Science</Typography>
+            <Typography variant="body2">University of Illinois at Urbana-Champaign</Typography>
+            <Typography variant="caption">2021 - Present</Typography>
+          </div>
+          <div className={classes.credential}>
+            <Typography variant="body1">Bachelor of Science in Computer Engineering</Typography>
+            <Typography variant="body2">Milwaukee School of Engineering</Typography>
+            <Typography variant="caption">2011-2015</Typography>
           </div>
         </div>
         <div className={classes.credentialBox}>
