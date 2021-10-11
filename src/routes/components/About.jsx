@@ -23,6 +23,7 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: '2rem',
     [theme.breakpoints.down('sm')]: {
       flexDirection: 'column',
+      gap: '1rem',
     },
   },
   profilePictureContainer: {
