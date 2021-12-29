@@ -13,7 +13,7 @@ To build the robotic nerf blaster I placed a hose clamp over the trigger, so tha
   </figure>
   <figure>
     <img src="/projects/nerf-blaster/nerf-blaster-side-view.jpeg" style="width: 100%; max-width: 225px; max-height:300px;" />
-    <figcaption class="MuiTypography-root MuiTypography-caption" style="text-align: center;">Nerf Blaster Side View<</figcaption>
+    <figcaption class="MuiTypography-root MuiTypography-caption" style="text-align: center;">Nerf Blaster Side View</figcaption>
   </figure>
 </div>
 <br>
