@@ -50,7 +50,7 @@ To control the physical GPIO pins and read the image data from the camera the ra
 <div style="display: flex; justify-content: center;">
   <figure>
     <img src="/projects/nerf-blaster/frontend.png" style="width: 100%; max-width: 215px; max-height:464px;" />
-    <figcaption class="MuiTypography-root MuiTypography-caption" style="text-align: center;">Wire Diagram</figcaption>
+    <figcaption class="MuiTypography-root MuiTypography-caption" style="text-align: center;">Frontend Application</figcaption>
   </figure>
 </div>
 <br>
