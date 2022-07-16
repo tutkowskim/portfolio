@@ -3,8 +3,8 @@ import { useEffect, useState } from 'react';
 export const BreakPoints = { SMALL: 'x', MEDIUM: 'm', LARGE: 'l' };
 
 const calculateBreakpoint = () => {
-  if (window.innerWidth < 481) return BreakPoints.SMALL;
-  if (window.innerWidth < 769) return BreakPoints.MEDIUM;
+  if (window.innerWidth < 780) return BreakPoints.SMALL;
+  if (window.innerWidth < 1100) return BreakPoints.MEDIUM;
   return BreakPoints.LARGE;
 };
 
