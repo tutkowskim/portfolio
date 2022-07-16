@@ -7,3 +7,7 @@ a, a:hover, a:visited, a:focus {
   text-decoration: none;
   color: inherit;
 }
+
+p {
+  margin: 0;
+}
