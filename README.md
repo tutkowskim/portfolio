@@ -1,5 +1,5 @@
 # Portfolio
-A react application to showcase my personal projects.
+A react application to showcase my personal achievements.
 
 ## View it now
 https://www.tutkowski.com

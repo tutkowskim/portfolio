@@ -1,2 +1,0 @@
-#### Portfolio
-This website is a collection of some of my personal projects I've completed over years for fun and as an opportunity to explore technologies that I may not have had a chance to experiment with during my professionals projects.
