@@ -68,7 +68,7 @@ const App = () => {
           </div>
           <div className="portfolio-right-bar">
             <div className="vertical-line" />
-            <a className="rotated-text" href="#menu" aria-label="navmenu">mark@tutkowski.com</a>
+            <a className="rotated-text" href="mailto:mark@tutkowski.com" aria-label="navmenu">mark@tutkowski.com</a>
             <div className="vertical-line" />
           </div>
         </>
@@ -77,7 +77,7 @@ const App = () => {
           <div className="portfolio-footer-wrapper">
             <div className="horizontal-line" />
             <div>
-              <a href="#menu" aria-label="navmenu">mark@tutkowski.com</a>
+              <a href="mailto:mark@tutkowski.com" aria-label="navmenu">mark@tutkowski.com</a>
               <div className="portfolio-footer-icons">
                 <a href="https://www.linkedin.com/in/marktutkowski/" aria-label="LinkedIn"><FontAwesomeIcon icon={faLinkedin} /></a>
                 <a href="https://github.com/tutkowskim" aria-label="Github"><FontAwesomeIcon icon={faGithub} /></a>
