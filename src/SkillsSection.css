@@ -1,0 +1,15 @@
+.skills-container {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.skills-container-item {
+  max-width: 100px;
+  max-height: 100px;
+  min-height: 100px;
+  margin: auto;
+}

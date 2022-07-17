@@ -13,13 +13,15 @@ import { BreakPoints, useBreakpoints } from './useBreakpoints';
 import useOutsideAlerter from './useOutsideAlerter';
 import AboutSection from './AboutSection';
 import ExperienceSection from './ExperienceSection';
-import Sample from './ProjectsSection';
+import ProjectsSection from './ProjectsSection';
+import SkillsSection from './SkillsSection';
 import './App.css';
 
 const sections = [
   { id: 'about', label: 'About', component: AboutSection },
+  { id: 'skills', label: 'Skills', component: SkillsSection },
   { id: 'experience', label: 'Experience', component: ExperienceSection },
-  { id: 'projects', label: 'Projects', component: Sample },
+  { id: 'projects', label: 'Projects', component: ProjectsSection },
 ];
 
 const App = () => {

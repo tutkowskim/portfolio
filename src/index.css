@@ -10,6 +10,7 @@ a, a:hover, a:visited, a:focus {
 
 p {
   margin: 0;
+  margin-bottom: 10px;
 }
 
 ul {
