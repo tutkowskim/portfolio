@@ -95,8 +95,8 @@ const App = () => {
       )}
       {breakPoint === BreakPoints.SMALL && (
         <div ref={menuRef} className={classNames('portfolio-menu', { 'portfolio-menu--visible': showMenu })}>
-          {sections.map((section) => <a key={section.id} className="portfolio-menu-item" href={`#${section.id}`} onClick={hideMenu}>{section.label}</a>)}
-          <a className="portfolio-menu-item" href="https://www.resume.tutkowski.com">Resume</a>
+          {sections.map((section) => <a key={section.id} className="portfolio-menu-item" href={`#${section.id}`} onClick={hideMenu}><button type="button">{section.label}</button></a>)}
+          <a className="portfolio-menu-item" href="https://www.resume.tutkowski.com"><button type="button">Resume</button></a>
         </div>
       )}
     </div>

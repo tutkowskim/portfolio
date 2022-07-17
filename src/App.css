@@ -71,16 +71,11 @@
   right: 0px;
 }
 
-.portfolio-menu-item {
+.portfolio-menu-item button {
   margin: 1rem;
-  color: black;
-  text-align: center;
-  height: 20px;
+  width: calc(100% - 2rem);
 }
 
-.portfolio-menu-item:hover {
-  background-color: #7C86A6;
-}
 
 .portfolio-footer {
   margin: 10px;
