@@ -5,6 +5,7 @@
   grid-gap: 1rem;
   flex-wrap: wrap;
   justify-content: center;
+  margin: 10px;
 }
 
 .skills-container-item {

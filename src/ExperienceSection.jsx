@@ -36,7 +36,7 @@ const ExperienceSection = () => {
         <div className="experience-tabs">
           {experience.map((position) => (
             <button
-              className={classNames('experience-tab', { 'experience-tab--selected': position === selectedExperienceItem })}
+              className={classNames('experience-tab', { 'experience-tab--not-selected': position !== selectedExperienceItem })}
               key={position.company}
               type="button"
               tabIndex={0}

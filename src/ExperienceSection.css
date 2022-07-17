@@ -15,16 +15,15 @@
   background: none;
 	color: inherit;
 	border: none;
-  border-right: 2px inset #D3D3D3;;
+  border-right: 2px inset #2D2F33;
   text-align: left;
 }
 
-.experience-tab:hover {
-  background-color: #7C86A6;
+.experience-tab--not-selected {
+  border-right: 2px inset #D3D3D3;
 }
-
-.experience-tab--selected {
-  border-right: 2px inset #7C86A6;
+.experience-tab--not-selected:hover {
+  border-right: none;
 }
 
 .experience-tab-outlet {
@@ -68,11 +67,14 @@
   .experience-tab  {
     flex-basis: 1 1 auto;
     border-right: none;
-    border-bottom: 2px inset #D3D3D3;
+    border-bottom: 2px inset #2D2F33;
   }  
 
-  .experience-tab--selected   {
+  .experience-tab--not-selected {
     border-right: none;
-    border-bottom: 2px inset #7C86A6;
-  }  
+    border-bottom: 2px inset #D3D3D3;
+  }
+  .experience-tab--not-selected:hover {
+    border-bottom: none;
+  }
 }
