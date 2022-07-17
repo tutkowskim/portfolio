@@ -74,7 +74,7 @@ const ProjectsSection = () => (
           <div className="project-image-container">
             <img className="project-image" src={project.imageUrl} alt={project.name} />
           </div>
-          <div>
+          <div className="project-information-container">
             <h4 className="project-title">{project.name}</h4>
             <div className="project-technologies">
               {project.technologiesUsed.map((t) => (

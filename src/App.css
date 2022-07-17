@@ -53,6 +53,7 @@
   margin: auto;
   width: 100%;
   max-width: 1000px;
+  gap: 3rem;
 }
 
 .portfolio-menu {

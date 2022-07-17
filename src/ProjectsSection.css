@@ -16,6 +16,10 @@
   align-items: center;
 }
 
+.project-information-container {
+  flex: 1 1 auto;
+}
+
 .project-image {
   max-height: 100px;
   max-width: 100px;
