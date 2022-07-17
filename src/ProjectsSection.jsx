@@ -10,11 +10,11 @@ Morbi in pellentesque ipsum. Aenean posuere rutrum risus vel elementum. Donec ut
 
 Duis vulputate, ligula ut commodo mattis, neque felis euismod lacus, eget vehicula mauris lorem in dolor. Nam id dolor pulvinar, convallis massa quis, vehicula orci. Nullam vitae semper mi, sit amet fermentum lectus. Proin vehicula risus id fringilla rutrum. Pellentesque aliquet dui in quam scelerisque rhoncus. Sed turpis elit, placerat et nisl ut, porttitor egestas turpis. Aliquam erat volutpat. Curabitur ac elit mi. Nunc consectetur arcu quis magna pretium, vel consequat lacus pharetra. Vestibulum molestie bibendum erat non ornare.`;
 
-const Sample = () => (
+const ProjectsSection = () => (
   <>
-    <h3>Sample Section</h3>
+    <h3>{'Some Things I\'ve Been Working on.'}</h3>
     <p>{text}</p>
   </>
 );
 
-export default Sample;
+export default ProjectsSection;

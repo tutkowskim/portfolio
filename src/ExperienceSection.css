@@ -1,0 +1,78 @@
+.experience-tabber {
+  padding: 10px;
+  background-color: #fafafa;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.experience-tabs {
+  flex: 0 0 140px;
+}
+
+.experience-tab {
+  width: 100%;
+  background: none;
+	color: inherit;
+	border: none;
+  border-right: 2px inset #D3D3D3;;
+  text-align: left;
+}
+
+.experience-tab:hover {
+  background-color: #7C86A6;
+}
+
+.experience-tab--selected {
+  border-right: 2px inset #7C86A6;
+}
+
+.experience-tab-outlet {
+  flex-grow: 1;
+}
+
+.experience-tab-outlet h4 {
+  margin: 0px;
+}
+
+.experience-tab-outlet p {
+  font-size: 12px;
+}
+
+.experience-tab-outlet ul {
+  list-style: none;
+  padding: 0;
+}
+
+.experience-tab-outlet ul li {
+  padding-left: 1.3em;
+}
+
+.experience-tab-outlet ul li:before {
+  content: "\25B8";
+  display: inline-block;
+  margin-left: -1.3em;
+  width: 1.3em;
+}
+
+@media only screen and (max-width: 680px) { /* Size should match breakpoints hook */
+  .experience-tabber {
+    flex-direction: column;
+  }
+
+  .experience-tabs {
+    flex-basis: unset;
+    display: flex;
+  }
+
+  .experience-tab  {
+    flex-basis: 1 1 auto;
+    border-right: none;
+    border-bottom: 2px inset #D3D3D3;
+  }  
+
+  .experience-tab--selected   {
+    border-right: none;
+    border-bottom: 2px inset #7C86A6;
+  }  
+}

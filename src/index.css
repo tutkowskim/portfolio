@@ -11,3 +11,19 @@ a, a:hover, a:visited, a:focus {
 p {
   margin: 0;
 }
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  padding-left: 1.3em;
+}
+
+ul li:before {
+  content: "\25B8";
+  display: inline-block;
+  margin-left: -1.3em;
+  width: 1.3em;
+}
