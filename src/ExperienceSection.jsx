@@ -16,7 +16,7 @@ const experience = [
     ],
   },
   {
-    company: 'Northwester Mutual',
+    company: 'Northwestern Mutual',
     role: 'Software Engineer',
     period: 'April 2021 - Feb 2022',
     responsibilities: [
