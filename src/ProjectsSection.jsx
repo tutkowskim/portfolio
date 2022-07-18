@@ -9,6 +9,7 @@ const projects = [
     imageUrl: '/project-logos/wine-not-splurge.png',
     description: 'Wine not Splurge is a visual narration I created to explore the D3 library. The narration explores the correlation between the cost of wine and it\'s quality and attempts to answer the question if it\'s worth spending a little extra on a bottle of wine.',
     technologiesUsed: [
+      { name: 'Javascript', icon: '/technology-icons/javascript.svg' },
       { name: 'HTML', icon: '/technology-icons/html.svg' },
       { name: 'CSS', icon: '/technology-icons/css.svg' },
     ],
