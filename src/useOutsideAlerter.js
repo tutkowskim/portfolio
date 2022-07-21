@@ -1,9 +1,10 @@
 import { useEffect } from 'react';
 
-function useOutsideAlerter(ref, callback) {
+function useOutsideAlerter(refs, callback) {
   useEffect(() => {
     function handleClickOutside(event) {
-      if (ref.current && !ref.current.contains(event.target)) {
+      const clickedRefs = refs.filter((ref) => ref.current && ref.current.contains(event.target));
+      if (clickedRefs.length <= 0) {
         callback();
       }
     }
@@ -13,7 +14,7 @@ function useOutsideAlerter(ref, callback) {
       // Unbind the event listener on clean up
       document.removeEventListener('mousedown', handleClickOutside);
     };
-  }, [ref]);
+  }, refs);
 }
 
 export default useOutsideAlerter;

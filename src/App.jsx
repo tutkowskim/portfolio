@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import classNames from 'classnames';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faLinkedin,
@@ -27,11 +27,12 @@ const sections = [
 const App = () => {
   const breakPoint = useBreakpoints();
   const menuRef = useRef(null);
+  const menuBtnRef = useRef(null);
   const [showMenu, setShowMenu] = useState(false);
 
   const hideMenu = () => setShowMenu(false);
-  const openMenu = () => setShowMenu(true);
-  useOutsideAlerter(menuRef, hideMenu);
+  const toggleMenu = () => setShowMenu(!showMenu);
+  useOutsideAlerter([menuBtnRef, menuRef], hideMenu);
 
   return (
     <div className="portfolio">
@@ -41,14 +42,20 @@ const App = () => {
             <img src="/logo-white.svg" height={40} alt="Mark Tutkowski" />
             <h2 className="portfolio-header-item">Mark Tutkowski</h2>
           </div>
-          {breakPoint === BreakPoints.SMALL
-            ? <a className="portfolio-header-item" href="#menu" aria-label="navmenu" onClick={openMenu}><FontAwesomeIcon icon={faBars} /></a>
-            : (
-              <>
-                {sections.map((section) => <a key={section.id} className="portfolio-header-item" href={`#${section.id}`}>{section.label}</a>)}
-                <a className="portfolio-header-item" href="https://www.resume.tutkowski.com">Resume</a>
-              </>
-            )}
+          {breakPoint === BreakPoints.SMALL ? (
+            <button className="portfolio-header-item" type="button" aria-label="Menu" ref={menuBtnRef} onClick={toggleMenu} style={{ width: 47.66 }}>
+              <FontAwesomeIcon icon={showMenu ? faXmark : faBars} />
+            </button>
+          ) : (
+            <>
+              {sections.map((section) => (
+                <a key={section.id} className="portfolio-header-item" href={`#${section.id}`}>
+                  <button type="button">{section.label}</button>
+                </a>
+              ))}
+              <a className="portfolio-header-item" href="https://www.resume.tutkowski.com"><button className="portfolio-resume-button" type="button">Resume</button></a>
+            </>
+          )}
         </div>
       </div>
       <div className="portfolio-content">
@@ -59,6 +66,16 @@ const App = () => {
             </div>
           ))}
         </div>
+        {breakPoint === BreakPoints.SMALL && (
+          <div ref={menuRef} className={classNames('portfolio-menu', { 'portfolio-menu--visible': showMenu })}>
+            {sections.map((section) => (
+              <a key={section.id} className="portfolio-menu-item" href={`#${section.id}`} onClick={hideMenu}>
+                <button type="button">{section.label}</button>
+              </a>
+            ))}
+            <a className="portfolio-menu-item" href="https://www.resume.tutkowski.com"><button type="button">Resume</button></a>
+          </div>
+        )}
       </div>
       {breakPoint === BreakPoints.LARGE ? (
         <>
@@ -91,12 +108,6 @@ const App = () => {
             </div>
             <div className="horizontal-line" />
           </div>
-        </div>
-      )}
-      {breakPoint === BreakPoints.SMALL && (
-        <div ref={menuRef} className={classNames('portfolio-menu', { 'portfolio-menu--visible': showMenu })}>
-          {sections.map((section) => <a key={section.id} className="portfolio-menu-item" href={`#${section.id}`} onClick={hideMenu}><button type="button">{section.label}</button></a>)}
-          <a className="portfolio-menu-item" href="https://www.resume.tutkowski.com"><button type="button">Resume</button></a>
         </div>
       )}
     </div>
