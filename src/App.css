@@ -1,3 +1,7 @@
+.portfolio {
+  overflow: hidden;
+}
+
 .portfolio-header {
   height: 40px;
   display: flex;
