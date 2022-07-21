@@ -86,6 +86,7 @@
   bottom: -10px;
   right: -160px;
   width: 150px;
+  transition: 0.5s;
 }
 
 .portfolio-menu--visible {
