@@ -2,12 +2,7 @@ import React, { useState, useRef } from 'react';
 import classNames from 'classnames';
 import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faLinkedin,
-  faGithub,
-  faInstagram,
-  faFacebook,
-} from '@fortawesome/free-brands-svg-icons';
+import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 
 import { BreakPoints, useBreakpoints } from './useBreakpoints';
 import useOutsideAlerter from './useOutsideAlerter';
@@ -83,8 +78,6 @@ const App = () => {
             <div className="vertical-line" />
             <a href="https://www.linkedin.com/in/marktutkowski/" aria-label="LinkedIn"><FontAwesomeIcon icon={faLinkedin} /></a>
             <a href="https://github.com/tutkowskim" aria-label="Github"><FontAwesomeIcon icon={faGithub} /></a>
-            <a href="https://www.instagram.com/tutkowski" aria-label="Instagram"><FontAwesomeIcon icon={faInstagram} /></a>
-            <a href="https://www.facebook.com/tutkowski.mark" aria-label="Facebook"><FontAwesomeIcon icon={faFacebook} /></a>
             <div className="vertical-line" />
           </div>
           <div className="portfolio-right-bar">
@@ -102,8 +95,6 @@ const App = () => {
               <div className="portfolio-footer-icons">
                 <a href="https://www.linkedin.com/in/marktutkowski/" aria-label="LinkedIn"><FontAwesomeIcon icon={faLinkedin} /></a>
                 <a href="https://github.com/tutkowskim" aria-label="Github"><FontAwesomeIcon icon={faGithub} /></a>
-                <a href="https://www.instagram.com/tutkowski" aria-label="Instagram"><FontAwesomeIcon icon={faInstagram} /></a>
-                <a href="https://www.facebook.com/tutkowski.mark" aria-label="Facebook"><FontAwesomeIcon icon={faFacebook} /></a>
               </div>
             </div>
             <div className="horizontal-line" />
