@@ -19,7 +19,7 @@ const sections = [
   { id: 'projects', label: 'Projects', component: ProjectsSection },
 ];
 
-const App = () => {
+function App() {
   const breakPoint = useBreakpoints();
   const menuRef = useRef(null);
   const menuBtnRef = useRef(null);
@@ -103,6 +103,6 @@ const App = () => {
       )}
     </div>
   );
-};
+}
 
 export default App;

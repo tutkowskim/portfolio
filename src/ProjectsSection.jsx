@@ -65,33 +65,35 @@ const projects = [
   },
 ];
 
-const ProjectsSection = () => (
-  <>
-    <h3>{'Some Things I\'ve Been Working on.'}</h3>
-    <p>{sectionIntro}</p>
-    <div className="projects-collection">
-      {projects.map((project) => (
-        <div className="project" key={project.name}>
-          <div className="project-image-container">
-            <img className="project-image" src={project.imageUrl} alt={project.name} />
-          </div>
-          <div className="project-information-container">
-            <h4 className="project-title">{project.name}</h4>
-            <div className="project-technologies">
-              {project.technologiesUsed.map((t) => (
-                <img key={t.name} alt={t.name} title={t.name} src={t.icon} />
-              ))}
+function ProjectsSection() {
+  return (
+    <>
+      <h3>{'Some Things I\'ve Been Working on.'}</h3>
+      <p>{sectionIntro}</p>
+      <div className="projects-collection">
+        {projects.map((project) => (
+          <div className="project" key={project.name}>
+            <div className="project-image-container">
+              <img className="project-image" src={project.imageUrl} alt={project.name} />
             </div>
-            <p className="project-description">{project.description}</p>
-            <div className="project-links">
-              { project.projectUrl && <a href={project.projectUrl}><button type="button">View Project</button></a>}
-              { project.githubUrl && <a href={project.githubUrl}><button type="button">View Source</button></a>}
+            <div className="project-information-container">
+              <h4 className="project-title">{project.name}</h4>
+              <div className="project-technologies">
+                {project.technologiesUsed.map((t) => (
+                  <img key={t.name} alt={t.name} title={t.name} src={t.icon} />
+                ))}
+              </div>
+              <p className="project-description">{project.description}</p>
+              <div className="project-links">
+                { project.projectUrl && <a href={project.projectUrl}><button type="button">View Project</button></a>}
+                { project.githubUrl && <a href={project.githubUrl}><button type="button">View Source</button></a>}
+              </div>
             </div>
           </div>
-        </div>
-      ))}
-    </div>
-  </>
-);
+        ))}
+      </div>
+    </>
+  );
+}
 
 export default ProjectsSection;

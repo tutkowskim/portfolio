@@ -20,7 +20,7 @@ const skills = [
   { name: 'CSS', icon: '/technology-icons/css.svg' },
 ];
 
-const SkillsSection = () => {
+function SkillsSection() {
   const breakpoint = useBreakpoints();
   const gridColumnLength = breakpoint === BreakPoints.SMALL ? 3 : 6;
   const gridTemplateColumns = `repeat(${gridColumnLength}, 100px)`;
@@ -34,6 +34,6 @@ const SkillsSection = () => {
       </div>
     </>
   );
-};
+}
 
 export default SkillsSection;

@@ -27,7 +27,7 @@ const experience = [
   },
 ];
 
-const ExperienceSection = () => {
+function ExperienceSection() {
   const [selectedExperienceItem, setSelectedExperienceItem] = useState(experience[0]);
   return (
     <>
@@ -63,6 +63,6 @@ const ExperienceSection = () => {
       </div>
     </>
   );
-};
+}
 
 export default ExperienceSection;
