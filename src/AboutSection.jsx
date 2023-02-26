@@ -13,12 +13,12 @@ function AboutSection() {
         ? (
           <div>
             <p>{intro}</p>
-            <img src="/profile-picture.jpeg" alt="profile" height="250px" style={{ display: 'block', margin: 'auto', padding: '10px' }} />
+            <img src="/profile-picture-min.jpeg" alt="profile" height="250px" style={{ display: 'block', margin: 'auto', padding: '10px' }} />
             <p>{backStory}</p>
           </div>
         ) : (
           <div style={{ display: 'inline-block' }}>
-            <img src="/profile-picture.jpeg" alt="profile" height="250px" style={{ float: 'left', marginRight: '10px' }} />
+            <img src="/profile-picture-min.jpeg" alt="profile" height="250px" style={{ float: 'left', marginRight: '10px' }} />
             <div>
               <p>{intro}</p>
               <br />

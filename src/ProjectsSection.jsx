@@ -6,7 +6,7 @@ const sectionIntro = 'I\'ve found that one of the best ways to learn new things 
 const projects = [
   {
     name: 'News Word Cloud',
-    imageUrl: '/project-logos/news-word-cloud.png',
+    imageUrl: '/project-logos/news-word-cloud-min.png',
     description: 'A news search bar which creates a word cloud to highlight popular words in recent articles to help visualize popular topics.',
     technologiesUsed: [
       { name: 'Typescript', icon: '/technology-icons/typescript.svg' },
@@ -19,7 +19,7 @@ const projects = [
   },
   {
     name: 'Wine not Splurge?',
-    imageUrl: '/project-logos/wine-not-splurge.png',
+    imageUrl: '/project-logos/wine-not-splurge-min.png',
     description: 'Wine not Splurge is a visual narration I created to explore the D3 library. The narration explores the correlation between the cost of wine and it\'s quality and attempts to answer the question if it\'s worth spending a little extra on a bottle of wine.',
     technologiesUsed: [
       { name: 'Javascript', icon: '/technology-icons/javascript.svg' },
