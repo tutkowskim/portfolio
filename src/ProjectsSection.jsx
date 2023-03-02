@@ -5,6 +5,20 @@ const sectionIntro = 'I\'ve found that one of the best ways to learn new things 
 
 const projects = [
   {
+    name: 'Weather',
+    imageUrl: '/project-logos/weather.min.png',
+    description: 'A weather application which shows current and forecasted weather data from Open Weather.',
+    technologiesUsed: [
+      { name: 'Typescript', icon: '/technology-icons/typescript.svg' },
+      { name: 'GraphQL', icon: '/technology-icons/graphql.svg' },
+      { name: 'Angular', icon: '/technology-icons/angular.svg' },
+      { name: 'HTML', icon: '/technology-icons/html.svg' },
+      { name: 'CSS', icon: '/technology-icons/css.svg' },
+    ],
+    githubUrl: 'https://github.com/tutkowskim/weather',
+    projectUrl: 'https://www.weather.tutkowski.com',
+  },
+  {
     name: 'News Word Cloud',
     imageUrl: '/project-logos/news-word-cloud-min.png',
     description: 'A news search bar which creates a word cloud to highlight popular words in recent articles to help visualize popular topics.',
