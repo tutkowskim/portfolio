@@ -54,7 +54,7 @@ function App() {
                   <button type="button">{section.label}</button>
                 </a>
               ))}
-              <a className="portfolio-header-item" href="https://www.resume.tutkowski.com"><button className="portfolio-resume-button" type="button">Resume</button></a>
+              <a className="portfolio-header-item" href="https://resume.tutkowski.com"><button className="portfolio-resume-button" type="button">Resume</button></a>
             </>
           )}
         </div>
@@ -74,7 +74,7 @@ function App() {
                 <button type="button">{section.label}</button>
               </a>
             ))}
-            <a className="portfolio-menu-item" href="https://www.resume.tutkowski.com"><button type="button">Resume</button></a>
+            <a className="portfolio-menu-item" href="https://resume.tutkowski.com"><button type="button">Resume</button></a>
           </div>
         )}
       </div>
