@@ -1,6 +1,9 @@
 import React from 'react';
 import {
-  Avatar, Box, Button, Typography,
+  Avatar,
+  Box,
+  Button,
+  Typography,
 } from '@mui/material';
 import SocialMediaIcons from '../components/SocialMediaIcons';
 import useTypeWriterEffect from '../hooks/useTypeWriterEffect';
@@ -22,7 +25,7 @@ function HomeSection() {
   const showResume = () => { window.location = 'https://resume.tutkowski.com'; };
 
   return (
-    <Box sx={{ height: { xs: 'calc(100vh - 56px)', sm: 'calc(100vh - 64px)' } }}>
+    <Box sx={{ minHeight: 700, height: { xs: 'calc(100vh - 56px)', sm: 'calc(100vh - 64px)' } }}>
       <Box sx={{
         height: '100%',
         maxWidth: 550,
