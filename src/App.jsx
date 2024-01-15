@@ -1,117 +1,89 @@
-import React, { useState, useRef } from 'react';
-import classNames from 'classnames';
-import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
+import React, { useState } from 'react';
 import {
-  faLinkedin,
-  faGithub,
-  faFacebook,
-  faInstagram,
-} from '@fortawesome/free-brands-svg-icons';
+  AppBar,
+  Box,
+  Button,
+  Drawer,
+  Toolbar,
+  Typography,
+  IconButton,
+  List,
+  ListItem,
+  ListItemButton,
+  ListItemText,
+} from '@mui/material';
+import MenuIcon from '@mui/icons-material/Menu';
 
-import { BreakPoints, useBreakpoints } from './useBreakpoints';
-import useOutsideAlerter from './useOutsideAlerter';
-import AboutSection from './AboutSection';
-import ExperienceSection from './ExperienceSection';
-import ProjectsSection from './ProjectsSection';
-import SkillsSection from './SkillsSection';
-import './App.css';
-
-const sections = [
-  { id: 'about', label: 'About', component: AboutSection },
-  { id: 'skills', label: 'Skills', component: SkillsSection },
-  { id: 'experience', label: 'Experience', component: ExperienceSection },
-  { id: 'projects', label: 'Projects', component: ProjectsSection },
-];
+import sections from './sections';
 
 function App() {
-  const breakPoint = useBreakpoints();
-  const menuRef = useRef(null);
-  const menuBtnRef = useRef(null);
-  const [showMenu, setShowMenu] = useState(false);
-
-  const hideMenu = () => setShowMenu(false);
-  const toggleMenu = () => setShowMenu(!showMenu);
-  useOutsideAlerter([menuBtnRef, menuRef], hideMenu);
+  const [showDrawer, setShowDrawer] = useState(false);
+  const toggleDrawer = () => setShowDrawer(!showDrawer);
+  const scrollToSection = (section) => {
+    const sectionAnchor = document.getElementById(section.name);
+    if (sectionAnchor) sectionAnchor.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'start' });
+  };
 
   return (
-    <div className="portfolio">
-      <div className="portfolio-header">
-        <div className="portfolio-header-item-content-wrapper">
-          <div className="portfolio-header-logo">
-            <img src="/logo-white.svg" height={40} alt="Mark Tutkowski" />
-            <h2 className="portfolio-header-item">Mark Tutkowski</h2>
-          </div>
-          {breakPoint === BreakPoints.SMALL ? (
-            <button className="portfolio-header-item" type="button" aria-label="Menu" ref={menuBtnRef} onClick={toggleMenu} style={{ width: 47.66 }}>
-              <FontAwesomeIcon icon={showMenu ? faXmark : faBars} />
-            </button>
-          ) : (
-            <>
-              {sections.map((section) => (
-                <a key={section.id} className="portfolio-header-item" href={`#${section.id}`}>
-                  <button type="button">{section.label}</button>
-                </a>
-              ))}
-              <a className="portfolio-header-item" href="https://resume.tutkowski.com"><button className="portfolio-resume-button" type="button">Resume</button></a>
-            </>
-          )}
-        </div>
-      </div>
-      <div className="portfolio-content">
-        <div className="portfolio-content-wrapper flex-column">
-          {sections.map((section) => (
-            <div key={section.id} id={section.id}>
-              {section.component()}
-            </div>
-          ))}
-        </div>
-        {breakPoint === BreakPoints.SMALL && (
-          <div ref={menuRef} className={classNames('portfolio-menu', { 'portfolio-menu--visible': showMenu })}>
+    <>
+      <AppBar position="sticky">
+        <Toolbar>
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+            Mark Tutkowski
+          </Typography>
+          <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {sections.map((section) => (
-              <a key={section.id} className="portfolio-menu-item" href={`#${section.id}`} onClick={hideMenu}>
-                <button type="button">{section.label}</button>
-              </a>
+              <Button
+                key={section.name}
+                color="inherit"
+                sx={{ textTransform: 'none' }}
+                onClick={() => scrollToSection(section)}
+              >
+                {section.name}
+              </Button>
             ))}
-            <a className="portfolio-menu-item" href="https://resume.tutkowski.com"><button type="button">Resume</button></a>
-          </div>
-        )}
-      </div>
-      {breakPoint === BreakPoints.LARGE ? (
-        <>
-          <div className="portfolio-left-bar">
-            <div className="vertical-line" />
-            <a href="https://www.facebook.com/profile.php?id=100090190470875" aria-label="Facebook"><FontAwesomeIcon icon={faFacebook} /></a>
-            <a href="https://www.instagram.com/tutkowskim/" aria-label="Instagram"><FontAwesomeIcon icon={faInstagram} /></a>
-            <a href="https://www.linkedin.com/in/marktutkowski/" aria-label="LinkedIn"><FontAwesomeIcon icon={faLinkedin} /></a>
-            <a href="https://github.com/tutkowskim" aria-label="Github"><FontAwesomeIcon icon={faGithub} /></a>
-            <div className="vertical-line" />
-          </div>
-          <div className="portfolio-right-bar">
-            <div className="vertical-line" />
-            <a className="rotated-text" href="mailto:mark@tutkowski.com" aria-label="navmenu">mark@tutkowski.com</a>
-            <div className="vertical-line" />
-          </div>
-        </>
-      ) : (
-        <div className="portfolio-footer">
-          <div className="portfolio-footer-wrapper">
-            <div className="horizontal-line" />
-            <div>
-              <a href="mailto:mark@tutkowski.com" aria-label="navmenu">mark@tutkowski.com</a>
-              <div className="portfolio-footer-icons">
-                <a href="https://www.facebook.com/profile.php?id=100090190470875" aria-label="Facebook"><FontAwesomeIcon icon={faFacebook} /></a>
-                <a href="https://www.instagram.com/tutkowskim/" aria-label="Instagram"><FontAwesomeIcon icon={faInstagram} /></a>
-                <a href="https://www.linkedin.com/in/marktutkowski/" aria-label="LinkedIn"><FontAwesomeIcon icon={faLinkedin} /></a>
-                <a href="https://github.com/tutkowskim" aria-label="Github"><FontAwesomeIcon icon={faGithub} /></a>
-              </div>
-            </div>
-            <div className="horizontal-line" />
-          </div>
+          </Box>
+          <IconButton
+            color="inherit"
+            aria-label="open drawer"
+            edge="start"
+            onClick={toggleDrawer}
+            sx={{ mr: 2, display: { sm: 'none' } }}
+          >
+            <MenuIcon />
+          </IconButton>
+        </Toolbar>
+      </AppBar>
+
+      <Drawer
+        variant="temporary"
+        open={showDrawer}
+        onClose={toggleDrawer}
+        sx={{ display: { xs: 'block', sm: 'none' } }}
+      >
+        <List>
+          {sections.map((section) => (
+            <ListItem key={section.name} sx={{ minWidth: 240 }}>
+              <ListItemButton
+                sx={{ textAlign: 'center' }}
+                onClick={() => {
+                  scrollToSection(section);
+                  setShowDrawer(false);
+                }}
+              >
+                <ListItemText primary={section.name} />
+              </ListItemButton>
+            </ListItem>
+          ))}
+        </List>
+      </Drawer>
+
+      {sections.map((section) => (
+        <div key={section.name} id={section.name}>
+          {section.component}
         </div>
-      )}
-    </div>
+      ))}
+    </>
   );
 }
 
