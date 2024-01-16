@@ -41,7 +41,7 @@ function HomeSection() {
       >
         <Avatar sx={{ height: { xs: 200, sm: 245 }, width: { xs: 200, sm: 245 } }} src="/profile-picture-min.jpeg" />
         <Typography variant="h5">{into}</Typography>
-        <Typography variant="h2">{title}</Typography>
+        <Typography variant="h4">{title}</Typography>
         <Typography variant="subtitle1">{description}</Typography>
         <SocialMediaIcons
           facebookUrl="https://www.facebook.com/profile.php?id=100090190470875"
