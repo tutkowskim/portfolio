@@ -24,3 +24,7 @@ jobs:
       - name: Copy files to the s3 website content bucket
         run:
           aws s3 sync build s3://${{ secrets.AWS_S3_BUCKET_NAME }} --delete
+
+      - name: Revalidate html
+        run:
+         aws s3 cp s3://${{ secrets.AWS_S3_BUCKET_NAME }} s3://${{ secrets.AWS_S3_BUCKET_NAME }} --recursive --include \"*.html\" --metadata-directive REPLACE --acl public-read --cache-control max-age=0,must-revalidate,public --content-type \"text/html; charset=utf-8\"
