@@ -25,7 +25,7 @@ function HomeSection() {
   const showResume = () => { window.location = 'https://resume.tutkowski.com'; };
 
   return (
-    <Box sx={{ minHeight: 700, height: { xs: 'calc(100vh - 56px)', sm: 'calc(100vh - 64px)' } }}>
+    <Box sx={{ minHeight: 630, height: { xs: 'calc(100vh - 56px)', sm: 'calc(100vh - 64px)' } }}>
       <Box sx={{
         height: '100%',
         maxWidth: 550,
